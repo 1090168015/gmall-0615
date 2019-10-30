@@ -1,495 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/gmall-gateway/src/main/java/com/atgui/gmall/gateway/config/GmallCorsConfig.java" line="10" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a5066006-817d-42d8-970b-1f37993664bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/gmall-generator/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/java/com/atguigu/RenrenApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/java/com/atguigu/config/DbConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/java/com/atguigu/controller/SysGeneratorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/java/com/atguigu/dao/GeneratorDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/java/com/atguigu/dao/MySQLGeneratorDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/java/com/atguigu/dao/OracleGeneratorDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/java/com/atguigu/dao/PostgreSQLGeneratorDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/java/com/atguigu/dao/SQLServerGeneratorDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/java/com/atguigu/entity/ColumnEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/java/com/atguigu/entity/TableEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/java/com/atguigu/service/SysGeneratorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/java/com/atguigu/utils/Constant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/java/com/atguigu/utils/DateUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/java/com/atguigu/utils/GenUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/java/com/atguigu/utils/PageUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/java/com/atguigu/utils/Query.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/java/com/atguigu/utils/R.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/java/com/atguigu/utils/RRException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/java/com/atguigu/utils/RRExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/generator.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/mapper/MySQLGeneratorDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/mapper/OracleGeneratorDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/mapper/PostgreSQLGeneratorDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/mapper/SQLServerGeneratorDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/css/AdminLTE.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/css/all-skins.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/js/common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/js/generator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/js/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/libs/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/libs/app.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/libs/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/libs/fastclick.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/libs/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/libs/jquery.slimscroll.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/libs/router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/libs/vue.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/plugins/jqgrid/grid.locale-cn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/plugins/jqgrid/jquery.jqGrid.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/plugins/jqgrid/ui.jqgrid-bootstrap-ui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/plugins/jqgrid/ui.jqgrid-bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/plugins/jqgrid/ui.jqgrid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/plugins/layer/layer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/plugins/layer/mobile/layer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/plugins/layer/mobile/need/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/plugins/layer/skin/default/icon-ext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/plugins/layer/skin/default/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/plugins/layer/skin/default/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/plugins/layer/skin/default/loading-0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/plugins/layer/skin/default/loading-1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/plugins/layer/skin/default/loading-2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/plugins/layer/skin/moon/default.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/static/plugins/layer/skin/moon/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/template/Controller.java.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/template/Dao.java.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/template/Dao.xml.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/template/Entity.java.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/template/Service.java.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/template/ServiceImpl.java.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/template/add-or-update.vue.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/template/index.vue.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/template/menu.sql.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/views/generator.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/views/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/src/main/resources/views/main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/generator.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/mapper/MySQLGeneratorDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/mapper/OracleGeneratorDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/mapper/PostgreSQLGeneratorDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/mapper/SQLServerGeneratorDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/css/AdminLTE.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/css/all-skins.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/js/common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/js/generator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/js/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/libs/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/libs/app.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/libs/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/libs/fastclick.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/libs/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/libs/jquery.slimscroll.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/libs/router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/libs/vue.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/plugins/jqgrid/grid.locale-cn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/plugins/jqgrid/jquery.jqGrid.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/plugins/jqgrid/ui.jqgrid-bootstrap-ui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/plugins/jqgrid/ui.jqgrid-bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/plugins/jqgrid/ui.jqgrid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/plugins/layer/layer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/plugins/layer/mobile/layer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/plugins/layer/mobile/need/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/plugins/layer/skin/default/icon-ext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/plugins/layer/skin/default/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/plugins/layer/skin/default/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/plugins/layer/skin/default/loading-0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/plugins/layer/skin/default/loading-1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/plugins/layer/skin/default/loading-2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/plugins/layer/skin/moon/default.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/static/plugins/layer/skin/moon/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/template/Controller.java.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/template/Dao.java.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/template/Dao.xml.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/template/Entity.java.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/template/Service.java.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/template/ServiceImpl.java.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/template/add-or-update.vue.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/template/index.vue.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/template/menu.sql.vm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/views/generator.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/views/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-generator/target/classes/views/main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/controller/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/controller/OrderItemController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/controller/OrderOperateHistoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/controller/OrderReturnApplyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/controller/OrderReturnReasonController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/controller/OrderSettingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/controller/PaymentInfoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/controller/RefundInfoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/dao/OrderDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/dao/OrderItemDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/dao/OrderOperateHistoryDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/dao/OrderReturnApplyDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/dao/OrderReturnReasonDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/dao/OrderSettingDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/dao/PaymentInfoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/dao/RefundInfoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/entity/OrderEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/entity/OrderItemEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/entity/OrderOperateHistoryEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/entity/OrderReturnApplyEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/entity/OrderReturnReasonEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/entity/OrderSettingEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/entity/PaymentInfoEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/entity/RefundInfoEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/service/OrderItemService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/service/OrderOperateHistoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/service/OrderReturnApplyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/service/OrderReturnReasonService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/service/OrderSettingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/service/PaymentInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/service/RefundInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/service/impl/OrderItemServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/service/impl/OrderOperateHistoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/service/impl/OrderReturnApplyServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/service/impl/OrderReturnReasonServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/service/impl/OrderSettingServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/service/impl/PaymentInfoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/service/impl/RefundInfoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/resources/mapper/oms/OrderDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/resources/mapper/oms/OrderItemDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/resources/mapper/oms/OrderOperateHistoryDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/resources/mapper/oms/OrderReturnApplyDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/resources/mapper/oms/OrderReturnReasonDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/resources/mapper/oms/OrderSettingDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/resources/mapper/oms/PaymentInfoDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-oms/src/main/resources/mapper/oms/RefundInfoDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/AttrAttrgroupRelationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/AttrController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/AttrGroupController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/BrandController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/CategoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/CommentReplayController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/ProductAttrValueController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/SkuImagesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/SkuInfoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/SkuSaleAttrValueController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/SpuCommentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/SpuImagesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/SpuInfoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/SpuInfoDescController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/dao/AttrAttrgroupRelationDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/dao/AttrDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/dao/AttrGroupDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/dao/BrandDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/dao/CategoryDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/dao/CommentReplayDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/dao/ProductAttrValueDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/dao/SkuImagesDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/dao/SkuInfoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/dao/SkuSaleAttrValueDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/dao/SpuCommentDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/dao/SpuImagesDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/dao/SpuInfoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/dao/SpuInfoDescDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/entity/AttrAttrgroupRelationEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/entity/AttrEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/entity/AttrGroupEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/entity/BrandEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/entity/CategoryEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/entity/CommentReplayEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/entity/ProductAttrValueEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/entity/SkuImagesEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/entity/SkuInfoEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/entity/SkuSaleAttrValueEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/entity/SpuCommentEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/entity/SpuImagesEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/entity/SpuInfoDescEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/entity/SpuInfoEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/AttrAttrgroupRelationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/AttrGroupService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/AttrService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/BrandService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/CategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/CommentReplayService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/ProductAttrValueService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/SkuImagesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/SkuInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/SkuSaleAttrValueService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/SpuCommentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/SpuImagesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/SpuInfoDescService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/SpuInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/impl/AttrAttrgroupRelationServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/impl/AttrGroupServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/impl/AttrServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/impl/BrandServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/impl/CategoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/impl/CommentReplayServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/impl/ProductAttrValueServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/impl/SkuImagesServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/impl/SkuInfoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/impl/SkuSaleAttrValueServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/impl/SpuCommentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/impl/SpuImagesServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/impl/SpuInfoDescServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/impl/SpuInfoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/resources/mapper/pms/AttrAttrgroupRelationDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/resources/mapper/pms/AttrDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/resources/mapper/pms/AttrGroupDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/resources/mapper/pms/BrandDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/resources/mapper/pms/CategoryDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/resources/mapper/pms/CommentReplayDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/resources/mapper/pms/ProductAttrValueDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/resources/mapper/pms/SkuImagesDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/resources/mapper/pms/SkuInfoDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/resources/mapper/pms/SkuSaleAttrValueDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/resources/mapper/pms/SpuCommentDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/resources/mapper/pms/SpuImagesDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/resources/mapper/pms/SpuInfoDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/resources/mapper/pms/SpuInfoDescDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/controller/CategoryBoundsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/controller/CouponController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/controller/CouponHistoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/controller/CouponSpuCategoryRelationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/controller/CouponSpuRelationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/controller/HomeAdvController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/controller/HomeSubjectController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/controller/HomeSubjectSpuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/controller/MemberPriceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/controller/SeckillPromotionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/controller/SeckillSessionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/controller/SeckillSkuNoticeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/controller/SeckillSkuRelationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/controller/SkuBoundsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/controller/SkuFullReductionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/controller/SkuLadderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/controller/SpuBoundsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/controller/SpuFullReductionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/controller/SpuLadderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/dao/CategoryBoundsDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/dao/CouponDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/dao/CouponHistoryDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/dao/CouponSpuCategoryRelationDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/dao/CouponSpuRelationDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/dao/HomeAdvDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/dao/HomeSubjectDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/dao/HomeSubjectSpuDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/dao/MemberPriceDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/dao/SeckillPromotionDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/dao/SeckillSessionDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/dao/SeckillSkuNoticeDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/dao/SeckillSkuRelationDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/dao/SkuBoundsDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/dao/SkuFullReductionDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/dao/SkuLadderDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/dao/SpuBoundsDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/dao/SpuFullReductionDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/dao/SpuLadderDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/entity/CategoryBoundsEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/entity/CouponEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/entity/CouponHistoryEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/entity/CouponSpuCategoryRelationEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/entity/CouponSpuRelationEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/entity/HomeAdvEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/entity/HomeSubjectEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/entity/HomeSubjectSpuEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/entity/MemberPriceEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/entity/SeckillPromotionEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/entity/SeckillSessionEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/entity/SeckillSkuNoticeEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/entity/SeckillSkuRelationEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/entity/SkuBoundsEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/entity/SkuFullReductionEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/entity/SkuLadderEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/entity/SpuBoundsEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/entity/SpuFullReductionEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/entity/SpuLadderEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/CategoryBoundsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/CouponHistoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/CouponService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/CouponSpuCategoryRelationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/CouponSpuRelationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/HomeAdvService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/HomeSubjectService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/HomeSubjectSpuService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/MemberPriceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/SeckillPromotionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/SeckillSessionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/SeckillSkuNoticeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/SeckillSkuRelationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/SkuBoundsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/SkuFullReductionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/SkuLadderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/SpuBoundsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/SpuFullReductionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/SpuLadderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/impl/CategoryBoundsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/impl/CouponHistoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/impl/CouponServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/impl/CouponSpuCategoryRelationServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/impl/CouponSpuRelationServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/impl/HomeAdvServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/impl/HomeSubjectServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/impl/HomeSubjectSpuServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/impl/MemberPriceServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/impl/SeckillPromotionServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/impl/SeckillSessionServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/impl/SeckillSkuNoticeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/impl/SeckillSkuRelationServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/impl/SkuBoundsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/impl/SkuFullReductionServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/impl/SkuLadderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/impl/SpuBoundsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/impl/SpuFullReductionServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/service/impl/SpuLadderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/resources/mapper/sms/CategoryBoundsDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/resources/mapper/sms/CouponDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/resources/mapper/sms/CouponHistoryDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/resources/mapper/sms/CouponSpuCategoryRelationDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/resources/mapper/sms/CouponSpuRelationDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/resources/mapper/sms/HomeAdvDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/resources/mapper/sms/HomeSubjectDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/resources/mapper/sms/HomeSubjectSpuDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/resources/mapper/sms/MemberPriceDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/resources/mapper/sms/SeckillPromotionDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/resources/mapper/sms/SeckillSessionDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/resources/mapper/sms/SeckillSkuNoticeDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/resources/mapper/sms/SeckillSkuRelationDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/resources/mapper/sms/SkuBoundsDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/resources/mapper/sms/SkuFullReductionDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/resources/mapper/sms/SkuLadderDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/resources/mapper/sms/SpuBoundsDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/resources/mapper/sms/SpuFullReductionDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/resources/mapper/sms/SpuLadderDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/controller/GrowthChangeHistoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/controller/IntegrationChangeHistoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/controller/MemberCollectSpuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/controller/MemberCollectSubjectController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/controller/MemberController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/controller/MemberLevelController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/controller/MemberLoginLogController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/controller/MemberReceiveAddressController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/controller/MemberStatisticsInfoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/dao/GrowthChangeHistoryDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/dao/IntegrationChangeHistoryDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/dao/MemberCollectSpuDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/dao/MemberCollectSubjectDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/dao/MemberDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/dao/MemberLevelDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/dao/MemberLoginLogDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/dao/MemberReceiveAddressDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/dao/MemberStatisticsInfoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/entity/GrowthChangeHistoryEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/entity/IntegrationChangeHistoryEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/entity/MemberCollectSpuEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/entity/MemberCollectSubjectEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/entity/MemberEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/entity/MemberLevelEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/entity/MemberLoginLogEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/entity/MemberReceiveAddressEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/entity/MemberStatisticsInfoEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/service/GrowthChangeHistoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/service/IntegrationChangeHistoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/service/MemberCollectSpuService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/service/MemberCollectSubjectService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/service/MemberLevelService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/service/MemberLoginLogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/service/MemberReceiveAddressService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/service/MemberService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/service/MemberStatisticsInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/service/impl/GrowthChangeHistoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/service/impl/IntegrationChangeHistoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/service/impl/MemberCollectSpuServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/service/impl/MemberCollectSubjectServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/service/impl/MemberLevelServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/service/impl/MemberLoginLogServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/service/impl/MemberReceiveAddressServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/service/impl/MemberServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/service/impl/MemberStatisticsInfoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/resources/mapper/ums/GrowthChangeHistoryDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/resources/mapper/ums/IntegrationChangeHistoryDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/resources/mapper/ums/MemberCollectSpuDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/resources/mapper/ums/MemberCollectSubjectDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/resources/mapper/ums/MemberDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/resources/mapper/ums/MemberLevelDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/resources/mapper/ums/MemberLoginLogDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/resources/mapper/ums/MemberReceiveAddressDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-ums/src/main/resources/mapper/ums/MemberStatisticsInfoDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/java/com/atguigu/gmall/wms/controller/FeightTemplateController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/java/com/atguigu/gmall/wms/controller/ShAreaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/java/com/atguigu/gmall/wms/controller/WareInfoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/java/com/atguigu/gmall/wms/controller/WareOrderTaskController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/java/com/atguigu/gmall/wms/controller/WareOrderTaskDetailController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/java/com/atguigu/gmall/wms/controller/WareSkuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/java/com/atguigu/gmall/wms/dao/FeightTemplateDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/java/com/atguigu/gmall/wms/dao/ShAreaDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/java/com/atguigu/gmall/wms/dao/WareInfoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/java/com/atguigu/gmall/wms/dao/WareOrderTaskDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/java/com/atguigu/gmall/wms/dao/WareOrderTaskDetailDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/java/com/atguigu/gmall/wms/dao/WareSkuDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/java/com/atguigu/gmall/wms/entity/FeightTemplateEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/java/com/atguigu/gmall/wms/entity/ShAreaEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/java/com/atguigu/gmall/wms/entity/WareInfoEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/java/com/atguigu/gmall/wms/entity/WareOrderTaskDetailEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/java/com/atguigu/gmall/wms/entity/WareOrderTaskEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/java/com/atguigu/gmall/wms/entity/WareSkuEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/java/com/atguigu/gmall/wms/service/FeightTemplateService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/java/com/atguigu/gmall/wms/service/ShAreaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/java/com/atguigu/gmall/wms/service/WareInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/java/com/atguigu/gmall/wms/service/WareOrderTaskDetailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/java/com/atguigu/gmall/wms/service/WareOrderTaskService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/java/com/atguigu/gmall/wms/service/WareSkuService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/java/com/atguigu/gmall/wms/service/impl/FeightTemplateServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/java/com/atguigu/gmall/wms/service/impl/ShAreaServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/java/com/atguigu/gmall/wms/service/impl/WareInfoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/java/com/atguigu/gmall/wms/service/impl/WareOrderTaskDetailServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/java/com/atguigu/gmall/wms/service/impl/WareOrderTaskServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/java/com/atguigu/gmall/wms/service/impl/WareSkuServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/resources/mapper/wms/FeightTemplateDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/resources/mapper/wms/ShAreaDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/resources/mapper/wms/WareInfoDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/resources/mapper/wms/WareOrderTaskDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/resources/mapper/wms/WareOrderTaskDetailDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gmall-wms/src/main/resources/mapper/wms/WareSkuDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-gateway/src/main/java/com/atgui/gmall/gateway/config/GmallCorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/config/DataSourceConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/config/MybatisPlusConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/OSSController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/config/DataSourceConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gmall-sms/src/main/resources/bootstrap.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-admin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-admin/src/main/java/com/atguigu/common/utils/RedisUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-admin/src/main/java/com/atguigu/common/utils/RedisUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-admin/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-admin/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-admin/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-admin/src/main/resources/application-prod.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-admin/src/main/resources/application-test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-admin/src/main/resources/application-test.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-admin/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-admin/target/classes/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-admin/target/classes/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-admin/target/classes/application-prod.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-admin/target/classes/application-test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-admin/target/classes/application-test.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-pms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-pms/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-pms/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-pms/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-pms/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-pms/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-pms/src/test/java/com/atguigu/gmall/pms/GmallPmsApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-pms/src/test/java/com/atguigu/gmall/pms/GmallPmsApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-sms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-sms/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/GmallSmsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/GmallSmsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-sms/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-sms/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-ums/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-ums/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-wms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-wms/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/gmall-admin/target/" />
@@ -502,6 +50,7 @@
     <ignored path="$PROJECT_DIR$/gmall-wms/target/" />
     <ignored path="$PROJECT_DIR$/../新建文件夹/gmall-generator/target/" />
     <ignored path="D:/Program Files (x86)/FeiQ/feiq/Recv Files/第六阶段/资料/逆向工程/gmall-generator/target/" />
+    <ignored path="$PROJECT_DIR$/gmall-gateway/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -512,56 +61,19 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gmall-core/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gmall-pms/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gmall-pms/src/main/resources/bootstrap.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" column="55" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gmall-pms/src/main/resources/application.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/GmallPmsApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>queryCategories</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -571,9 +83,6 @@
       <list>
         <option value="$PROJECT_DIR$/gmall-pms/src/main/resources/bootstrap.properties" />
         <option value="$PROJECT_DIR$/gmall-oms/pom.xml" />
-        <option value="$PROJECT_DIR$/gmall-sms/pom.xml" />
-        <option value="$PROJECT_DIR$/gmall-ums/pom.xml" />
-        <option value="$PROJECT_DIR$/gmall-wms/pom.xml" />
         <option value="$PROJECT_DIR$/gmall-wms/.gitignore" />
         <option value="$PROJECT_DIR$/gmall-ums/.gitignore" />
         <option value="$PROJECT_DIR$/gmall-sms/.gitignore" />
@@ -582,12 +91,37 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/gmall-generator/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/gmall-generator/src/main/resources/generator.properties" />
-        <option value="$PROJECT_DIR$/gmall-pms/src/main/resources/bootstrap.yml" />
         <option value="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/OrderController.java" />
         <option value="$PROJECT_DIR$/gmall-generator/pom.xml" />
-        <option value="$PROJECT_DIR$/gmall-pms/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/gmall-pms/pom.xml" />
         <option value="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/GmallPmsApplication.java" />
+        <option value="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/config/DataSourceConfig.java" />
+        <option value="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/config/SecurityConfig.java" />
+        <option value="$PROJECT_DIR$/gmall-pms/src/main/resources/bootstrap.yml" />
+        <option value="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/GmallSmsApplication.java" />
+        <option value="$PROJECT_DIR$/gmall-sms/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall-wms/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall-ums/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall-sms/src/main/resources/bootstrap.yml" />
+        <option value="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/config/DataSourceConfig.java" />
+        <option value="$PROJECT_DIR$/gmall-sms/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/gmall-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall-gateway/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/gmall-admin/src/main/java/com/atguigu/common/utils/RedisUtils.java" />
+        <option value="$PROJECT_DIR$/gmall-admin/src/main/java/com/atguigu/common/aspect/SysLogAspect.java" />
+        <option value="$PROJECT_DIR$/gmall-admin/src/main/resources/application-dev.yml" />
+        <option value="$PROJECT_DIR$/gmall-admin/src/main/resources/application-test.yml" />
+        <option value="$PROJECT_DIR$/gmall-admin/src/main/resources/application-prod.yml" />
+        <option value="$PROJECT_DIR$/gmall-gateway/src/main/java/com/atgui/gmall/gateway/GmallCorsConfig.java" />
+        <option value="$PROJECT_DIR$/gmall-gateway/src/main/java/com/atgui/gmall/gateway/config/GmallCorsConfig.java" />
+        <option value="$PROJECT_DIR$/gmall-pms/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/config/MybatisPlusConfig.java" />
+        <option value="$PROJECT_DIR$/gmall-pms/src/test/java/com/atguigu/gmall/pms/GmallPmsApplicationTests.java" />
+        <option value="$PROJECT_DIR$/gmall-pms/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/OSSController.java" />
+        <option value="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/config/SwaggerConfig.java" />
+        <option value="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/CategoryService.java" />
+        <option value="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/CategoryController.java" />
+        <option value="$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/impl/CategoryServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -602,21 +136,30 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand />
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="gmall-core" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="105" />
-    <option name="y" value="49" />
-    <option name="width" value="1054" />
-    <option name="height" value="1020" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-40" />
+    <option name="y" value="6" />
+    <option name="width" value="1021" />
+    <option name="height" value="1052" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -624,59 +167,10 @@
               <item name="gmall-0615" type="b2602c69:ProjectViewProjectNode" />
               <item name="gmall-0615" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="gmall-0615" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gmall-0615" type="462c0819:PsiDirectoryNode" />
-              <item name="gmall-core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gmall-0615" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gmall-0615" type="462c0819:PsiDirectoryNode" />
-              <item name="gmall-pms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gmall-0615" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gmall-0615" type="462c0819:PsiDirectoryNode" />
-              <item name="gmall-pms" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gmall-0615" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gmall-0615" type="462c0819:PsiDirectoryNode" />
-              <item name="gmall-pms" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gmall-0615" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gmall-0615" type="462c0819:PsiDirectoryNode" />
-              <item name="gmall-pms" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gmall-0615" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gmall-0615" type="462c0819:PsiDirectoryNode" />
-              <item name="gmall-pms" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gmall-0615" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gmall-0615" type="462c0819:PsiDirectoryNode" />
-              <item name="gmall-pms" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -688,7 +182,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/gmall-generator/pom.xml" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8 (2)" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -698,11 +193,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\develop_code\gmall-0615\gmall-sms\src\main\java\com\atguigu\gmall\sms" />
+      <recent name="D:\develop_code\gmall-0615\gmall-sms\src\main\resources" />
       <recent name="D:\develop_code\gmall-0615" />
       <recent name="D:\develop_code\gmall-0615\gmall-wms\src\main\resources" />
       <recent name="D:\develop_code\gmall-0615\gmall-wms\src\main\java\com\atguigu\gmall\wms" />
-      <recent name="D:\develop_code\gmall-0615\gmall-ums\src\main\resources" />
-      <recent name="D:\develop_code\gmall-0615\gmall-ums\src\main\java\com\atguigu\gmall\ums" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -721,12 +216,35 @@
         </RuleState>
       </list>
     </option>
-    <option name="contentProportion" value="0.19584244" />
+    <option name="contentProportion" value="0.23249453" />
   </component>
-  <component name="RunManager" selected="Spring Boot.GmallPmsApplication">
+  <component name="RunManager" selected="JUnit.GmallPmsApplicationTests.test">
+    <configuration name="GmallPmsApplicationTests.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gmall-pms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.gmall.pms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.atguigu.gmall.pms" />
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.gmall.pms.GmallPmsApplicationTests" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GmallAdminMainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="gmall-admin" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.GmallAdminMainApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GmallGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gmall-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atgui.gmall.gateway.GmallGatewayApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -773,6 +291,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.GmallPmsApplicationTests.test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -788,18 +311,43 @@
       <workItem from="1572275331482" duration="3050000" />
       <workItem from="1572283547233" duration="151000" />
       <workItem from="1572308196882" duration="960000" />
-      <workItem from="1572309665490" duration="7364000" />
+      <workItem from="1572309665490" duration="20153000" />
+      <workItem from="1572343479316" duration="18989000" />
+      <workItem from="1572368781968" duration="1382000" />
+      <workItem from="1572394138819" duration="729000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="GmallPmsApplicationTests_test - 2019.10.29 at 20h 15m 19s.xml">
+      <configuration name="GmallPmsApplicationTests.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GmallPmsApplicationTests_test - 2019.10.29 at 20h 26m 22s.xml">
+      <configuration name="GmallPmsApplicationTests.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GmallPmsApplicationTests_test - 2019.10.29 at 20h 29m 57s.xml">
+      <configuration name="GmallPmsApplicationTests.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GmallPmsApplicationTests_test - 2019.10.29 at 20h 36m 04s.xml">
+      <configuration name="GmallPmsApplicationTests.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GmallPmsApplicationTests_test - 2019.10.29 at 21h 22m 26s.xml">
+      <configuration name="GmallPmsApplicationTests.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GmallPmsApplicationTests_test - 2019.10.29 at 21h 23m 36s.xml">
+      <configuration name="GmallPmsApplicationTests.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GmallPmsApplicationTests_test - 2019.10.29 at 21h 25m 20s.xml">
+      <configuration name="GmallPmsApplicationTests.test" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13415000" />
+    <option name="totallyTimeSpent" value="47224000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2054721" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1110515" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -809,24 +357,24 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.31731844" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30527496" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32945284" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.34225845" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.32960895" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="15" visible="true" weight="0.26703912" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.3150838" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="15" visible="true" weight="0.51173186" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.1389485" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24868283" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.54594016" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" />
@@ -838,105 +386,19 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/config/SwaggerConfig.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gmall-pms/src/main/resources/bootstrap.properties" />
-    <entry file="file://$PROJECT_DIR$/gmall-oms/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-sms/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-ums/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-wms/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="24" column="43" lean-forward="true" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-wms/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-ums/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-pms/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-oms/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-sms/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-generator/src/main/resources/application.yml" />
-    <entry file="file://$PROJECT_DIR$/gmall-generator/src/main/resources/generator.properties" />
-    <entry file="file://$PROJECT_DIR$/gmall-generator/gmall-generator.iml" />
-    <entry file="file://$PROJECT_DIR$/gmall-pms/src/main/resources/mapper/oms/OrderDao.xml" />
-    <entry file="file://$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/OrderController.java" />
-    <entry file="file://$PROJECT_DIR$/gmall-oms/src/main/resources/mapper/oms/OrderDao.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-oms/src/main/java/com/atguigu/gmall/oms/controller/OrderController.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/AttrController.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-pms/src/main/resources/mapper/pms/AttrDao.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-sms/src/main/resources/mapper/sms/CouponDao.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/gmall-ums/src/main/java/com/atguigu/gmall/ums/controller/MemberController.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -955,16 +417,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/controller/CouponController.java">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-pms/src/test/java/com/atguigu/gmall/pms/GmallPmsApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/AttrAttrgroupRelationController.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -988,27 +440,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-pms/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="55" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-core/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-pms/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/GmallPmsApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -1019,10 +450,346 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-pms/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/config/DataSourceConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="349">
+          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/config/SecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/config/SecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-wms/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-ums/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-sms/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="81" column="10" selection-start-line="81" selection-start-column="10" selection-end-line="81" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/GmallSmsApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-pms/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-sms/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-gateway/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="34" column="86" selection-start-line="34" selection-start-column="86" selection-end-line="34" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-core/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="29" column="78" selection-start-line="28" selection-start-column="12" selection-end-line="29" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-gateway/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-admin/src/main/java/com/atguigu/common/utils/RedisUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-gateway/src/main/java/com/atgui/gmall/gateway/GmallGatewayApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/config/DataSourceConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-sms/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-admin/src/main/resources/application-test.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-admin/src/main/resources/application-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-admin/src/main/resources/application-prod.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-admin/src/main/java/com/atguigu/common/aspect/SysLogAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-admin/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="48" column="16" lean-forward="true" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-gateway/src/main/java/com/atgui/gmall/gateway/config/GmallCorsConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/develop/RepMaven/org/springframework/spring-web/5.2.0.RELEASE/spring-web-5.2.0.RELEASE.jar!/org/springframework/web/cors/reactive/UrlBasedCorsConfigurationSource.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/develop/RepMaven/com/baomidou/mybatis-plus-core/3.0.7.1/mybatis-plus-core-3.0.7.1.jar!/com/baomidou/mybatisplus/core/mapper/BaseMapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-416">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-pms/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/dao/BrandDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/org.springframework.boot.test.context.SpringBootTest">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>org.springframework.boot.test.context.SpringBootTest</OriginalElement>
+          <nodes>
+            <node x="" y="">org.springframework.test.context.BootstrapWith</node>
+            <node x="" y="">org.springframework.boot.test.context.SpringBootTest</node>
+            <node x="" y="">org.junit.jupiter.api.extension.ExtendWith</node>
+            <node x="" y="">java.lang.annotation.Inherited</node>
+            <node x="" y="">java.lang.annotation.Annotation</node>
+            <node x="" y="">java.lang.annotation.Documented</node>
+            <node x="" y="">java.lang.annotation.Target</node>
+            <node x="" y="">java.lang.annotation.Retention</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.865414710485133" x="212.0" y="300.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/com.atguigu.gmall.pms.GmallPmsApplicationTests">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>com.atguigu.gmall.pms.GmallPmsApplicationTests</OriginalElement>
+          <nodes>
+            <node x="" y="">com.atguigu.gmall.pms.GmallPmsApplicationTests</node>
+            <node x="" y="">org.springframework.boot.test.context.SpringBootTest</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="125.0" y="62.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-pms/src/test/java/com/atguigu/gmall/pms/GmallPmsApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/entity/BrandEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/develop/Java/src.zip!/java/io/Serializable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="168" column="17" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/develop/RepMaven/com/baomidou/mybatis-plus-extension/3.0.7.1/mybatis-plus-extension-3.0.7.1.jar!/com/baomidou/mybatisplus/extension/plugins/pagination/Page.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/develop/RepMaven/com/baomidou/mybatis-plus-core/3.0.7.1/mybatis-plus-core-3.0.7.1.jar!/com/baomidou/mybatisplus/core/metadata/IPage.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-pms/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="60" column="21" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/OSSController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1827#1843#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/config/SwaggerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/CategoryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/config/MybatisPlusConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/service/impl/CategoryServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-pms/src/main/java/com/atguigu/gmall/pms/controller/CategoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-622">
+          <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

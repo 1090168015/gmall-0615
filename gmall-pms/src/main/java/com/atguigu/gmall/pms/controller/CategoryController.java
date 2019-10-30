@@ -1,7 +1,7 @@
 package com.atguigu.gmall.pms.controller;
 
 import java.util.Arrays;
-import java.util.Map;
+import java.util.List;
 
 
 import com.atguigu.core.bean.PageVo;
@@ -11,12 +11,11 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.*;
+
 
 import com.atguigu.gmall.pms.entity.CategoryEntity;
 import com.atguigu.gmall.pms.service.CategoryService;
-
-
+import org.springframework.web.bind.annotation.*;
 
 
 /**
@@ -33,8 +32,15 @@ public class CategoryController {
     @Autowired
     private CategoryService categoryService;
 
+     @GetMapping                      //分类所在的级别为0查询所有商品分类
+     public Resp<List<CategoryEntity>> queryCategories(@RequestParam(value = "level",defaultValue = "0")Integer level, @RequestParam(value = "parentCid" ,required = false)Long parentCid){
+        List<CategoryEntity> categoryEntities = this.categoryService.queryCategories(level, parentCid);
+         return Resp.ok(categoryEntities);
+     }
+
     /**
      * 列表
+     *
      */
     @ApiOperation("分页查询(排序)")
     @GetMapping("/list")

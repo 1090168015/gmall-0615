@@ -3,6 +3,7 @@
   <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://D:/Program Files (x86)/FeiQ/feiq/Recv Files/第六阶段/资料/逆向工程/gmall-generator" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-admin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-gateway" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-oms" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-pms" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-sms" charset="UTF-8" />
