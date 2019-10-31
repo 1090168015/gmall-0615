@@ -172,7 +172,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/controller/SkuBoundsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
+            <state relative-caret-position="130">
               <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
             </state>
           </provider>
@@ -274,7 +274,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="187" />
     <option name="y" value="33" />
     <option name="width" value="1426" />
@@ -538,7 +538,7 @@
       <workItem from="1572343479316" duration="18989000" />
       <workItem from="1572368781968" duration="1382000" />
       <workItem from="1572394138819" duration="42169000" />
-      <workItem from="1572483696696" duration="34456000" />
+      <workItem from="1572483696696" duration="34756000" />
     </task>
     <servers />
   </component>
@@ -566,7 +566,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123200000" />
+    <option name="totallyTimeSpent" value="123500000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -578,10 +578,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-123" y="21" width="1426" height="1028" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.35155097" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2553648" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -597,7 +596,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32871974" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.16724336" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.51955307" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50096154" side_tool="true" weight="0.17430167" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
@@ -1038,7 +1037,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gmall-sms/src/main/java/com/atguigu/gmall/sms/controller/SkuBoundsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
+        <state relative-caret-position="130">
           <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
         </state>
       </provider>
