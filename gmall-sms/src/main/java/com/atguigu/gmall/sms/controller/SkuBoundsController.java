@@ -33,7 +33,7 @@ import com.atguigu.gmall.sms.service.SkuBoundsService;
 public class SkuBoundsController {
     @Autowired
     private SkuBoundsService skuBoundsService;
-    @ApiOperation("新增sku的营销信息")
+    @ApiOperation("新增sku的营销信息---")
     @PostMapping("/sale")
     public Resp<Object> saveSale(@RequestBody SaleVO saleVO) {
         skuBoundsService.saveSale(saleVO);
