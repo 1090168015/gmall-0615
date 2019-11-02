@@ -1,6 +1,6 @@
 package com.atguigu.gmall.sms.service.impl;
 
-import com.atguigu.gmall.sms.VO.SaleVO;
+import VO.SaleVO;
 import com.atguigu.gmall.sms.dao.SkuFullReductionDao;
 import com.atguigu.gmall.sms.dao.SkuLadderDao;
 import com.atguigu.gmall.sms.entity.SkuFullReductionEntity;

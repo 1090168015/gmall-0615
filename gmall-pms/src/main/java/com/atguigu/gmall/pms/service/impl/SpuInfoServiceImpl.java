@@ -1,24 +1,21 @@
 package com.atguigu.gmall.pms.service.impl;
 
+import VO.SaleVO;
 import com.atguigu.gmall.pms.dao.*;
 import com.atguigu.gmall.pms.entity.*;
 import com.atguigu.gmall.pms.feign.GmallSmsClient;
-import com.atguigu.gmall.pms.service.ProductAttrValueService;
+import com.atguigu.gmall.pms.service.SpuInfoDescService;
 import com.atguigu.gmall.pms.vo.ProductAttrValueVO;
-import com.atguigu.gmall.pms.vo.SaleVO;
 import com.atguigu.gmall.pms.vo.SkuInfoVO;
 import com.atguigu.gmall.pms.vo.SpuInfoVO;
 import org.apache.commons.lang3.StringUtils;
-import org.bouncycastle.asn1.esf.SPUserNotice;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -28,9 +25,9 @@ import com.atguigu.core.bean.Query;
 import com.atguigu.core.bean.QueryCondition;
 
 import com.atguigu.gmall.pms.service.SpuInfoService;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
-
-import javax.annotation.processing.SupportedOptions;
 
 
 @Service("spuInfoService")
@@ -50,6 +47,8 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
 
    @Autowired
    private GmallSmsClient gmallSmsClient;
+    @Autowired
+    SpuInfoDescService spuInfoDescService;
 
 
 
@@ -92,49 +91,21 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
     SPUX相关：3张表      pms_product_attr_value,pms_spu_info,pms_spu_info_desc
     sku相关：3张表        pms_sku_info,pms_sku_images,
     营销相关：3张表*/
-
+    @Transactional
     @Override   //注：主键类型在nacos配置文件里设置的自增模式，所示数据库表会自己增加，我们在程序里无法set，所以要在实体类中主键属性添加@TableId(type = IdType.INPUT)
     public void bigSave(SpuInfoVO spuInfoVO) {//SpuInfoVO已经将传进的参数接收，保存到了对象中
         // 1.保存spu相关3张表
-        // 1.1. 保存spu基本信息 spu_info
-        //SpuInfoVO继承SpuInfoEntity，保存方法可以直接用
-        spuInfoVO.setCreateTime(new Date());// 新增时，更新时间和创建时间一致
-        spuInfoVO.setUodateTime(spuInfoVO.getCreateTime());
-        spuInfoVO .setPublishStatus(1);
-        this.save(spuInfoVO);
-
+        Long spuId = saveSpuInfo(spuInfoVO);
         // 1.2. 保存spu的描述信息 spu_info_desc
-        Long spuId = spuInfoVO.getId();// 获取新增后的spuId,设置给spu_info_desc，因为spu_info_desc主键与spu_info保存是的主键相同
-        SpuInfoDescEntity spuInfoDescEntity = new SpuInfoDescEntity();
-        spuInfoDescEntity.setSpuId(spuId);
-        /*
-        // 把商品的图片描述，保存到spu详情中，图片地址以逗号进行分割
-        *List<String> spuImages = spuInfoVO.getSpuImages();
-        String desc = StringUtils.join(spuImages, ",");
-        spuInfoDescEntity.setDecript(desc);
-        * */
-        spuInfoDescEntity.setDecript(StringUtils.join(spuInfoVO.getSpuImages(),","));
-        spuInfoDescDao.insert(spuInfoDescEntity);//dao层调取保存方法，保存到数据库
+        this.spuInfoDescService.saveSpuDesc(spuInfoVO, spuId);
+       // int i =1/0;
         // 1.3. 保存spu的规格参数信息productAttrValue：#### baseAttrs  //对应的表是pms_product_attr_value，对应的实体类是ProductAttrValueEntity
-
-        List<ProductAttrValueVO> baseAttrs = spuInfoVO.getBaseAttrs();//将接收的参数取出
-        /*spuInfoDescEntity.setSpuId(spuId);*/
-        System.out.println(baseAttrs);
-        baseAttrs.forEach(baseAttr ->{
-            baseAttr.setSpuId(spuId);
-            this.productAttrValueDao.insert(baseAttr);
-        });
-
-      /*  if (!CollectionUtils.isEmpty(bassAttrs)){
-            List<ProductAttrValueEntity> productAttrValueEntities = bassAttrs.stream().map(productAttrValueVO -> {
-                productAttrValueVO.setSpuId(spuId);
-                productAttrValueVO.setAttrSort(0);
-                productAttrValueVO.setQuickShow(0);
-                return productAttrValueVO;
-            }).collect(Collectors.toList());
-            this.productAttrValueService.saveBatch(productAttrValueEntities);
-        }*/
+        saveBaseAttr(spuInfoVO, spuId);
         /// 2. 保存sku相关信息相关3张表，新增sku必须要有spu，所以sku与spu顺序不能变
+        saveSku(spuInfoVO, spuId);
+    }
+
+    private void saveSku(SpuInfoVO spuInfoVO, Long spuId) {
         List<SkuInfoVO> skuInfoVOS = spuInfoVO.getSkus();//获取sku信息
         if (CollectionUtils.isEmpty(skuInfoVOS)){//如果为空，直接返回,不用执行以下代码
             return;
@@ -188,10 +159,38 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
             BeanUtils.copyProperties(skuInfoVO,saleVO);
             saleVO.setSkuId(skuId);
             gmallSmsClient.saveSale(saleVO);
+        });
+    }
 
+    private void saveBaseAttr(SpuInfoVO spuInfoVO, Long spuId) {
+        List<ProductAttrValueVO> baseAttrs = spuInfoVO.getBaseAttrs();//将接收的参数取出
+        /*spuInfoDescEntity.setSpuId(spuId);*/
+        System.out.println(baseAttrs);
+        baseAttrs.forEach(baseAttr ->{
+            baseAttr.setSpuId(spuId);
+            this.productAttrValueDao.insert(baseAttr);
         });
 
+      /*  if (!CollectionUtils.isEmpty(bassAttrs)){
+            List<ProductAttrValueEntity> productAttrValueEntities = bassAttrs.stream().map(productAttrValueVO -> {
+                productAttrValueVO.setSpuId(spuId);
+                productAttrValueVO.setAttrSort(0);
+                productAttrValueVO.setQuickShow(0);
+                return productAttrValueVO;
+            }).collect(Collectors.toList());
+            this.productAttrValueService.saveBatch(productAttrValueEntities);
+        }*/
+    }
 
+
+    private Long saveSpuInfo(SpuInfoVO spuInfoVO) {
+        // 1.1. 保存spu基本信息 spu_info
+        //SpuInfoVO继承SpuInfoEntity，保存方法可以直接用
+        spuInfoVO.setCreateTime(new Date());// 新增时，更新时间和创建时间一致
+        spuInfoVO.setUodateTime(spuInfoVO.getCreateTime());
+        spuInfoVO .setPublishStatus(1);
+        this.save(spuInfoVO);
+        return spuInfoVO.getId();
     }
 
 }

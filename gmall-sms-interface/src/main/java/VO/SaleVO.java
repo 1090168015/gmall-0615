@@ -1,4 +1,4 @@
-package com.atguigu.gmall.pms.vo;
+package VO;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

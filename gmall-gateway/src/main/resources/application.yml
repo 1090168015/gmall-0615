@@ -23,7 +23,7 @@ spring:
           predicates:
             - Path=/ums/**
         - id: wms-route
-          uri: lb://wms-server
+          uri: lb://wms-service
           predicates:
             - Path=/wms/**
 
