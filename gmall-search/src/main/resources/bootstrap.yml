@@ -1,0 +1,7 @@
+server:
+  port:
+spring:
+  elasticsearch:
+    jest:
+      uris: http://192.168.20.100:9200
+

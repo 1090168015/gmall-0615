@@ -8,6 +8,9 @@ import com.atguigu.gmall.pms.service.SpuInfoDescService;
 import com.atguigu.gmall.pms.vo.ProductAttrValueVO;
 import com.atguigu.gmall.pms.vo.SkuInfoVO;
 import com.atguigu.gmall.pms.vo.SpuInfoVO;
+
+
+import io.seata.spring.annotation.GlobalTransactional;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,8 +28,6 @@ import com.atguigu.core.bean.Query;
 import com.atguigu.core.bean.QueryCondition;
 
 import com.atguigu.gmall.pms.service.SpuInfoService;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 
 
@@ -91,7 +92,7 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
     SPUX相关：3张表      pms_product_attr_value,pms_spu_info,pms_spu_info_desc
     sku相关：3张表        pms_sku_info,pms_sku_images,
     营销相关：3张表*/
-    @Transactional
+    @GlobalTransactional
     @Override   //注：主键类型在nacos配置文件里设置的自增模式，所示数据库表会自己增加，我们在程序里无法set，所以要在实体类中主键属性添加@TableId(type = IdType.INPUT)
     public void bigSave(SpuInfoVO spuInfoVO) {//SpuInfoVO已经将传进的参数接收，保存到了对象中
         // 1.保存spu相关3张表
@@ -103,6 +104,7 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
         saveBaseAttr(spuInfoVO, spuId);
         /// 2. 保存sku相关信息相关3张表，新增sku必须要有spu，所以sku与spu顺序不能变
         saveSku(spuInfoVO, spuId);
+     //   int i =1/0;
     }
 
     private void saveSku(SpuInfoVO spuInfoVO, Long spuId) {

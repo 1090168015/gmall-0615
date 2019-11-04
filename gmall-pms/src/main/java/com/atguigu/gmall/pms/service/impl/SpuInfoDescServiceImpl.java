@@ -32,7 +32,7 @@ public class SpuInfoDescServiceImpl extends ServiceImpl<SpuInfoDescDao, SpuInfoD
 
         return new PageVo(page);
     }
-    @Transactional(propagation = Propagation.REQUIRES_NEW)
+    @Transactional(propagation = Propagation.REQUIRED)
     public void saveSpuDesc(SpuInfoVO spuInfoVO, Long spuId) {
         SpuInfoDescEntity spuInfoDescEntity = new SpuInfoDescEntity();
         spuInfoDescEntity.setSpuId(spuId);
