@@ -14,7 +14,24 @@ import org.springframework.context.annotation.Primary;
 import javax.sql.DataSource;
 @Configuration
 public class DataSourceConfig {
-  /*  @Bean
+
+    @Bean
+    @Primary
+//  @ConfigurationProperties("spring.datasource")
+    public DataSource hikariDataSource(@Value("${spring.datasource.url}")String url,
+                                       @Value("${spring.datasource.driver-class-name}")String driverClassName,
+                                       @Value("${spring.datasource.username}")String username,
+                                       @Value("${spring.datasource.password}")String password){
+
+        HikariDataSource hikariDataSource = new HikariDataSource();
+        hikariDataSource.setJdbcUrl(url);
+        hikariDataSource.setDriverClassName(driverClassName);
+        hikariDataSource.setUsername(username);
+        hikariDataSource.setPassword(password);
+        return new DataSourceProxy(hikariDataSource);
+    }
+
+    /*  @Bean
     @ConfigurationProperties("spring.datasource")
     public DataSource hikariDataSource(@Value("{spring.datasource.url}") String url){
             HikariDataSource hikariDataSource =new HikariDataSource();
@@ -47,20 +64,5 @@ public class DataSourceConfig {
         return new DataSourceProxy(druidDataSource);
     }
 */
-    @Bean
-    @Primary
-//    @ConfigurationProperties("spring.datasource")
-    public DataSource hikariDataSource(@Value("${spring.datasource.url}")String url,
-                                       @Value("${spring.datasource.driver-class-name}")String driverClassName,
-                                       @Value("${spring.datasource.username}")String username,
-                                       @Value("${spring.datasource.password}")String password){
-
-        HikariDataSource hikariDataSource = new HikariDataSource();
-        hikariDataSource.setJdbcUrl(url);
-        hikariDataSource.setDriverClassName(driverClassName);
-        hikariDataSource.setUsername(username);
-        hikariDataSource.setPassword(password);
-        return new DataSourceProxy(hikariDataSource);
-    }
 
 }

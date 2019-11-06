@@ -1,10 +1,9 @@
 package com.atguigu.gmall.pms.service;
 
-import com.atguigu.core.bean.Resp;
-import com.baomidou.mybatisplus.extension.service.IService;
+import com.atguigu.gmall.core.bean.PageVo;
+import com.atguigu.gmall.core.bean.QueryCondition;
 import com.atguigu.gmall.pms.entity.CategoryEntity;
-import com.atguigu.core.bean.PageVo;
-import com.atguigu.core.bean.QueryCondition;
+import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;
 

@@ -1,22 +1,20 @@
 package com.atguigu.gmall.pms.controller;
 
 import java.util.Arrays;
-import java.util.Map;
+import java.util.List;
 
 
-import com.atguigu.core.bean.PageVo;
-import com.atguigu.core.bean.QueryCondition;
-import com.atguigu.core.bean.Resp;
+import com.atguigu.gmall.pms.entity.ProductAttrValueEntity;
+import com.atguigu.gmall.pms.service.ProductAttrValueService;
+import com.atguigu.gmall.pms.vo.SpuAttributeValueVO;
+import com.atguigu.gmall.core.bean.PageVo;
+import com.atguigu.gmall.core.bean.QueryCondition;
+import com.atguigu.gmall.core.bean.Resp;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-
-import com.atguigu.gmall.pms.entity.ProductAttrValueEntity;
-import com.atguigu.gmall.pms.service.ProductAttrValueService;
-
-
 
 
 /**
@@ -32,6 +30,16 @@ import com.atguigu.gmall.pms.service.ProductAttrValueService;
 public class ProductAttrValueController {
     @Autowired
     private ProductAttrValueService productAttrValueService;
+
+    @GetMapping("{spuId}")//根据spuId获取ProductAttrValueVO对象对应pms_product_attr_value，用于gmall-search工程远程调用分词
+    public Resp<List<SpuAttributeValueVO>> querySearchAttrValue(@PathVariable("spuId")Long spuId){
+       List<SpuAttributeValueVO> spuAttributeValueVOS =this.productAttrValueService.querySearchAttrValue(spuId);
+        return Resp.ok(spuAttributeValueVOS);
+    }
+
+
+
+
 
     /**
      * 列表

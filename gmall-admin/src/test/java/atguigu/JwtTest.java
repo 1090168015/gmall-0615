@@ -1,6 +1,6 @@
 package atguigu;
 
-import com.atguigu.modules.app.utils.JwtUtils;
+import com.atguigu.gmall.modules.app.utils.JwtUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

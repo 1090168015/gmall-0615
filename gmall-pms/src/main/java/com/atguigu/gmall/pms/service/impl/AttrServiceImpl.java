@@ -1,20 +1,19 @@
 package com.atguigu.gmall.pms.service.impl;
 
+import com.atguigu.gmall.core.bean.PageVo;
+import com.atguigu.gmall.core.bean.Query;
+import com.atguigu.gmall.core.bean.QueryCondition;
 import com.atguigu.gmall.pms.dao.AttrAttrgroupRelationDao;
+import com.atguigu.gmall.pms.dao.AttrDao;
 import com.atguigu.gmall.pms.entity.AttrAttrgroupRelationEntity;
+import com.atguigu.gmall.pms.entity.AttrEntity;
 import com.atguigu.gmall.pms.vo.AttrVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.atguigu.core.bean.PageVo;
-import com.atguigu.core.bean.Query;
-import com.atguigu.core.bean.QueryCondition;
 
-import com.atguigu.gmall.pms.dao.AttrDao;
-import com.atguigu.gmall.pms.entity.AttrEntity;
 import com.atguigu.gmall.pms.service.AttrService;
 import org.springframework.transaction.annotation.Transactional;
 

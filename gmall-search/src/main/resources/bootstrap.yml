@@ -1,7 +1,8 @@
-server:
-  port:
 spring:
-  elasticsearch:
-    jest:
-      uris: http://192.168.20.100:9200
+  application:
+    name: search-service
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
 

@@ -2,8 +2,8 @@ package com.atguigu.gmall.sms.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.atguigu.gmall.sms.entity.CouponSpuRelationEntity;
-import com.atguigu.core.bean.PageVo;
-import com.atguigu.core.bean.QueryCondition;
+import com.atguigu.gmall.core.bean.PageVo;
+import com.atguigu.gmall.core.bean.QueryCondition;
 
 
 /**

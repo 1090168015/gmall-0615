@@ -26,6 +26,12 @@ spring:
           uri: lb://wms-service
           predicates:
             - Path=/wms/**
+        - id: search-route
+          uri: lb://search-service
+          predicates:
+            - Path=/api/search/**
+          filters:
+            - RewritePath=/foo(?<segment>/?.*), $\{segment}
 
     nacos:
       discovery:

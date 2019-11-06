@@ -1,13 +1,20 @@
 package com.atguigu.gmall.pms.service.impl;
 
 import VO.SaleVO;
+import com.atguigu.gmall.core.bean.PageVo;
+import com.atguigu.gmall.core.bean.Query;
+import com.atguigu.gmall.core.bean.QueryCondition;
 import com.atguigu.gmall.pms.dao.*;
-import com.atguigu.gmall.pms.entity.*;
+import com.atguigu.gmall.pms.entity.SkuImagesEntity;
+import com.atguigu.gmall.pms.entity.SkuInfoEntity;
+import com.atguigu.gmall.pms.entity.SkuSaleAttrValueEntity;
+import com.atguigu.gmall.pms.entity.SpuInfoEntity;
 import com.atguigu.gmall.pms.feign.GmallSmsClient;
+import com.atguigu.gmall.pms.vo.SkuInfoVO;
 import com.atguigu.gmall.pms.service.SpuInfoDescService;
 import com.atguigu.gmall.pms.vo.ProductAttrValueVO;
-import com.atguigu.gmall.pms.vo.SkuInfoVO;
 import com.atguigu.gmall.pms.vo.SpuInfoVO;
+
 
 
 import io.seata.spring.annotation.GlobalTransactional;
@@ -23,9 +30,6 @@ import java.util.UUID;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.atguigu.core.bean.PageVo;
-import com.atguigu.core.bean.Query;
-import com.atguigu.core.bean.QueryCondition;
 
 import com.atguigu.gmall.pms.service.SpuInfoService;
 import org.springframework.util.CollectionUtils;
@@ -40,7 +44,7 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
    @Autowired
    ProductAttrValueDao productAttrValueDao;
    @Autowired
-    SkuInfoDao skuInfoDao;
+   SkuInfoDao skuInfoDao;
    @Autowired
    private SkuImagesDao skuImagesDao;
    @Autowired
