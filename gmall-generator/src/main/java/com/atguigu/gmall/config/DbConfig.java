@@ -9,10 +9,7 @@
 package com.atguigu.gmall.config;
 
 import com.atguigu.gmall.dao.*;
-import com.atguigu.gmall.search.dao.*;
 import com.atguigu.gmall.utils.RRException;
-import com.atguigu.dao.*;
-import com.atguigu.gmall.search.wms.dao.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

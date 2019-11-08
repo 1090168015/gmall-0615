@@ -19,13 +19,12 @@ import com.atguigu.gmall.pms.vo.SpuInfoVO;
 
 import io.seata.spring.annotation.GlobalTransactional;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -54,6 +53,9 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
    private GmallSmsClient gmallSmsClient;
     @Autowired
     SpuInfoDescService spuInfoDescService;
+
+    @Autowired
+    private AmqpTemplate amqpTemplate;
 
 
 
@@ -109,6 +111,27 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
         /// 2. 保存sku相关信息相关3张表，新增sku必须要有spu，所以sku与spu顺序不能变
         saveSku(spuInfoVO, spuId);
      //   int i =1/0;
+
+        sendMsg(spuId,"insert");
+
+      //  sendMsgSecond(spuId,"insert");
+
+
+
+    }
+
+    private void sendMsgSecond(Long spuId,String type){
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("id",spuId);
+        map.put("tpye",type) ;
+        amqpTemplate.convertAndSend("GMALL-ITEM-EXCHANGE","item."+type,map);
+    }
+
+    private void sendMsg(Long spuId,String type) {
+        Map<String, Object> map = new HashMap<>();
+        map.put("id",spuId);
+        map.put("type",type);
+        this.amqpTemplate.convertAndSend("GMALL-ITEM-EXCHANGE", "item."+type , map);
     }
 
     private void saveSku(SpuInfoVO spuInfoVO, Long spuId) {

@@ -17,10 +17,7 @@ public class SearchController {
     private SearchService searchService;
     @GetMapping
     public Resp<Object> search(SearchParamVO searchParamVO){
-
         SearchResponse response = this.searchService.search(searchParamVO);
-
         return Resp.ok(response);
-
     }
 }

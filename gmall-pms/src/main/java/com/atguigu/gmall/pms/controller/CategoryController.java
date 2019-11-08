@@ -8,6 +8,7 @@ import com.atguigu.gmall.pms.entity.CategoryEntity;
 import com.atguigu.gmall.core.bean.PageVo;
 import com.atguigu.gmall.core.bean.QueryCondition;
 import com.atguigu.gmall.core.bean.Resp;
+import com.atguigu.gmall.pms.vo.CategoryVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +33,13 @@ public class CategoryController {
     @Autowired
     private CategoryService categoryService;
 
-     @GetMapping                      //分类所在的级别为0查询所有商品分类
+    @GetMapping("{pid}")//根据一级分类id查询二级分类及三级分类
+    public Resp<List<CategoryVO>> queryCateGoryWithSub(@PathVariable("pid") Long pid){
+        List<CategoryVO>  categoryVOS= categoryService.queryCateGoryWithSub(pid);
+        return  Resp.ok(categoryVOS);
+    }
+
+     @GetMapping                      //分类查询的级别为默认值0时查询所有商品分类
      public Resp<List<CategoryEntity>> queryCategories(@RequestParam(value = "level",defaultValue = "0")Integer level, @RequestParam(value = "parentCid" ,required = false)Long parentCid){
         List<CategoryEntity> categoryEntities = this.categoryService.queryCategories(level, parentCid);
          return Resp.ok(categoryEntities);

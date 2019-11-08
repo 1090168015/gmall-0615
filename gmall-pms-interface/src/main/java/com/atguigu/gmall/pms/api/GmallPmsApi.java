@@ -7,12 +7,10 @@ import com.atguigu.gmall.pms.entity.BrandEntity;
 import com.atguigu.gmall.pms.entity.CategoryEntity;
 import com.atguigu.gmall.pms.entity.SkuInfoEntity;
 import com.atguigu.gmall.pms.entity.SpuInfoEntity;
+import com.atguigu.gmall.pms.vo.CategoryVO;
 import com.atguigu.gmall.pms.vo.SpuAttributeValueVO;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -36,5 +34,11 @@ public interface GmallPmsApi {//用于远程调用pmscontroller方法
 
     @GetMapping("pms/productattrvalue/{spuId}")//根据spuId获取ProductAttrValueVO对象对应pms_product_attr_value，用于gmall-search工程远程调用分词
     public Resp<List<SpuAttributeValueVO>> querySearchAttrValue(@PathVariable("spuId")Long spuId);
+
+    @GetMapping("pms/category")                      //分类所在的级别为0查询所有商品分类,用作Index门户工程三级分类
+    public Resp<List<CategoryEntity>> queryCategories(@RequestParam(value = "level",defaultValue = "0")Integer level, @RequestParam(value = "parentCid" ,required = false)Long parentCid);
+
+    @GetMapping("pms/category/{pid}")//根据一级分类id查询二级分类及三级分类
+    public Resp<List<CategoryVO>> queryCateGoryWithSub(@PathVariable("pid") Long pid);
 
 }

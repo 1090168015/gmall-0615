@@ -45,8 +45,9 @@ public class SearchServiceImpl implements SearchService {
         try {
         String dsl = buildDSL(searchParamVO);
         System.out.println(dsl);
+            // 构建查询条件
         Search search = new Search.Builder(dsl).addIndex("goods").addType("info").build();
-
+// 执行搜索，获取搜索结果集
             SearchResult searchResult = this.jestClient.execute(search);
             System.out.println("search:"+searchResult);
             SearchResponse searchResponse = parseResult(searchResult);
@@ -92,6 +93,7 @@ public class SearchServiceImpl implements SearchService {
         if ( !CollectionUtils.isEmpty(categoryAggBuckets)){
             //初始化分类VO
             SearchResponseAttrVO categoryVO = new SearchResponseAttrVO();
+            categoryVO.setName("分类");
             List<String> actegoryValues = categoryAggBuckets.stream().map(categoryBucket -> {
                 Map<String, Object> map = new HashMap<>();
                 map.put("id", categoryBucket.getKeyAsString());
@@ -133,15 +135,16 @@ public class SearchServiceImpl implements SearchService {
     }
     @Override
     public String buildDSL(SearchParamVO searchParamVO) {//由接收的请求数据模型，构建dsl查询语句，用于 基本检索
-//        1.构建查询过滤条件
-        //构建查询条件
         SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();//SearchSourceBuilder搜索条件构建器，辅助构建dsl语句
-        BoolQueryBuilder boolQueryBuilder = QueryBuilders.boolQuery();//QueryBuilders工具类，用于构建各种查询
-        SearchSourceBuilder searchSourceBuilder = sourceBuilder.query(boolQueryBuilder);
-        String keyword = searchParamVO.getKeyword();
-        if (StringUtils.isNotEmpty(keyword)){
+//        1.构建查询过滤条件        // 搜索条件构建器，辅助构建dsl语句
+        //构建查询条件    QueryBuilders工具类，用于构建各种查询
+        //    构建组合查询  布尔组合（bool)，因为组合查询可组合多种查询，匹配查询（match），过滤（filter），词条查询（terms）等
+        BoolQueryBuilder boolQueryBuilder = QueryBuilders.boolQuery();
+       // SearchSourceBuilder searchSourceBuilder1 = sourceBuilder.query(boolQueryBuilder);
+        String keyword = searchParamVO.getKeyword();//个人理解为keyword用户在搜索框里输入的搜索关键字，
+        if (StringUtils.isNotEmpty(keyword)){//根据搜索关键字进行进行匹配查询
             boolQueryBuilder.must(QueryBuilders.matchQuery("name",keyword).operator(Operator.AND));
-        }
+        }   //bool`把各种其它查询通过`must`（与）、`must_not`（非）、`should`（或）的方式进行组合,filter`中还可以再次进行`bool`组合条件过滤。
         //构建过滤条件
         String[] brands = searchParamVO.getBrand();//品牌过滤
         if (ArrayUtils.isNotEmpty(brands)){
@@ -151,7 +154,7 @@ public class SearchServiceImpl implements SearchService {
         if (ArrayUtils.isNotEmpty(catelog3)){
             boolQueryBuilder.filter(QueryBuilders.termsQuery("productCategoryId",catelog3));
         }
-        //搜索的规格属性过滤
+        //搜索的规格属性过滤,过滤属性，《个人理解为鼠标点选的内容，如颜色，品牌等，不是输入框里输入的内容》
         String[] props = searchParamVO.getProps();
         if (ArrayUtils.isNotEmpty(props)){
             for (String prop : props) {
@@ -200,7 +203,7 @@ public class SearchServiceImpl implements SearchService {
                 AggregationBuilders.terms("categoryAgg").field("productCategoryId")
                     .subAggregation(AggregationBuilders.terms("categoryNameAgg").field("productCategoryName"))
         );
-        //聚合搜索属性
+        //构建聚合搜索属性
         sourceBuilder.aggregation(
                 AggregationBuilders.nested("attrAgg","attrValueList")
                     .subAggregation(AggregationBuilders.terms("attrIdAgg").field("attrValueList.productAttributeId")

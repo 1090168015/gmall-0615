@@ -13,6 +13,7 @@ public class GmallCorsConfig {
         CorsConfiguration config = new CorsConfiguration();//跨域请对象
         // 允许的域,不要写*，否则cookie就无法使用了
         config.addAllowedOrigin("http://localhost:1000");//允许那些域名跨域请求
+        config.addAllowedOrigin("http://localhost:2000");
         // 允许的头信息
         config.addAllowedHeader("*");//允许跨域请求携带的头信息
         // 允许的请求方式

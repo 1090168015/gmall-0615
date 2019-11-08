@@ -32,6 +32,12 @@ spring:
             - Path=/api/search/**
           filters:
             - RewritePath=/foo(?<segment>/?.*), $\{segment}
+        - id: index-route
+          uri: lb://index-service
+          predicates:
+            - Path=/api/index/**
+          filters:
+            - RewritePath=/api(?<segment>/?.*), $\{segment}
 
     nacos:
       discovery:
