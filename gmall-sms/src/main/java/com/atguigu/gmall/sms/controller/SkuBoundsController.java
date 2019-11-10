@@ -1,8 +1,10 @@
 package com.atguigu.gmall.sms.controller;
 
 import java.util.Arrays;
+import java.util.List;
 
 
+import VO.ItemSaleVO;
 import VO.SaleVO;
 import com.atguigu.gmall.core.bean.PageVo;
 import com.atguigu.gmall.core.bean.QueryCondition;
@@ -11,6 +13,7 @@ import com.atguigu.gmall.sms.entity.SkuBoundsEntity;
 import com.atguigu.gmall.sms.service.SkuBoundsService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import net.sf.jsqlparser.expression.LongValue;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -29,6 +32,15 @@ import org.springframework.web.bind.annotation.*;
 public class SkuBoundsController {
     @Autowired
     private SkuBoundsService skuBoundsService;
+
+
+
+    @PostMapping("item/sales/{skuId}")
+    public Resp< List<ItemSaleVO>> queryItemSalveVOs(@PathVariable("skuId")Long skuId) {
+        List<ItemSaleVO> itemSaleVOS=this.skuBoundsService.queryItemSalVOS(skuId);
+        return Resp.ok(itemSaleVOS);
+    }
+
     @ApiOperation("新增sku的营销信息---")
     @PostMapping("/sale")
     public Resp<Object> saveSale(@RequestBody SaleVO saleVO) {

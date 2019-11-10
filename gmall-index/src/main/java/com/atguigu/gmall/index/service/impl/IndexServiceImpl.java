@@ -2,12 +2,14 @@ package com.atguigu.gmall.index.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.atguigu.gmall.core.bean.Resp;
+import com.atguigu.gmall.index.annotation.GmallCache;
 import com.atguigu.gmall.index.fengin.GmallPmsClient;
 import com.atguigu.gmall.index.service.IndexService;
 import com.atguigu.gmall.pms.entity.CategoryEntity;
 import com.atguigu.gmall.pms.vo.CategoryVO;
 import jdk.nashorn.internal.ir.annotations.Ignore;
 import org.apache.commons.lang3.StringUtils;
+import org.redisson.api.RCountDownLatch;
 import org.redisson.api.RLock;
 import org.redisson.api.RReadWriteLock;
 import org.redisson.api.RedissonClient;
@@ -38,7 +40,9 @@ public class IndexServiceImpl implements IndexService {
 
     @Autowired
     RedissonClient redissonClient;
-    
+
+    private static final long timeout =3000L;
+
     private static final String KEY_PREFIX ="index:category";
     
     @Override//查询一级分类
@@ -47,18 +51,19 @@ public class IndexServiceImpl implements IndexService {
         return resp.getData();
     }
 
+    @GmallCache(prefix = KEY_PREFIX,timeout = timeout,random = 50)
     @Override//根据父分类id查询所有子分类（根据一级分类id查询所有自分类）
     public List<CategoryVO> queryCategoryVO(Long pid) {
-        //1.查询缓存，缓存中有点化直接返回
-        String cache = this.stringRedisTemplate.opsForValue().get(KEY_PREFIX + pid);
-        if (StringUtils.isNotBlank(cache)){
-            return JSON.parseArray(cache,CategoryVO.class);
-        }
+//        //1.查询缓存，缓存中有点化直接返回
+//        String cache = this.stringRedisTemplate.opsForValue().get(KEY_PREFIX + pid);
+//        if (StringUtils.isNotBlank(cache)){
+//            return JSON.parseArray(cache,CategoryVO.class);
+//        }
         //2.若果缓存中没有，查询数据库
         Resp<List<CategoryVO>> listResp = gmallPmsClient.queryCateGoryWithSub(pid);
         List<CategoryVO> categoryVOS = listResp.getData();
-        //3.查询完成之后，放入缓存
-        this.stringRedisTemplate.opsForValue().set(KEY_PREFIX+pid,JSON.toJSONString(categoryVOS));
+//        //3.查询完成之后，放入缓存         //为防止雪崩，设置随机过期时间        //已将空值null缓存进redis，已解决穿透        //解决击穿要加分布式锁
+//        this.stringRedisTemplate.opsForValue().set(KEY_PREFIX+pid,JSON.toJSONString(categoryVOS),(int)(5+Math.random()*5),TimeUnit.DAYS);
         //响应数据
         return categoryVOS;
     }
@@ -152,7 +157,7 @@ public class IndexServiceImpl implements IndexService {
         lock.unlock();
         return  "已经增加成功";
     }
-
+    @Override
     public String testLock(){
         RLock lock = this.redissonClient.getLock("lock");
         lock.lock();
@@ -174,6 +179,14 @@ public class IndexServiceImpl implements IndexService {
         return msg;
     }
 
+    public String testRead1(){
+        RReadWriteLock readWriteLock = redissonClient.getReadWriteLock("readWriteLock");
+        readWriteLock.writeLock().lock(10L,TimeUnit.SECONDS);
+        String msg = this.stringRedisTemplate.opsForValue().get("msg");
+        return msg;
+
+    }
+
     @Override
     public String testWrite() {
         RReadWriteLock readWriteLock = redissonClient.getReadWriteLock("readWriteLock");
@@ -183,5 +196,35 @@ public class IndexServiceImpl implements IndexService {
         return "数据写入成功---"+msg;
     }
 
+
+    public String testWrite1(){
+
+        RReadWriteLock readWriteLock = redissonClient.getReadWriteLock("readWriteLock");
+        readWriteLock.writeLock().lock();
+        String msg = UUID.randomUUID().toString();
+        this.stringRedisTemplate.opsForValue().set("msg",msg);
+        return  "数据写入成功---"+msg;
+    }
+
+
+    @Override
+    public String latch() throws InterruptedException {//闭锁（CountDownLatch）
+        RCountDownLatch llatchDown = this.redissonClient.getCountDownLatch("latchDown");
+        String countString = this.stringRedisTemplate.opsForValue().get("count");
+        int count = Integer.parseInt(countString);
+        llatchDown.trySetCount(count);
+        llatchDown.await();
+        return "班长锁门";
+    }
+
+    @Override
+    public String out() {
+        RCountDownLatch latchDown = this.redissonClient.getCountDownLatch("latchDown");
+        String countString = this.stringRedisTemplate.opsForValue().get("count");
+        int count = Integer.parseInt(countString);
+        this.stringRedisTemplate.opsForValue().set("count",String.valueOf(--count));
+        latchDown.countDown();
+        return "出来一个人";
+    }
 }
 

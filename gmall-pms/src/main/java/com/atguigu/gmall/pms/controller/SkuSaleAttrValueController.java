@@ -1,6 +1,7 @@
 package com.atguigu.gmall.pms.controller;
 
 import java.util.Arrays;
+import java.util.List;
 
 
 import com.atguigu.gmall.pms.entity.SkuSaleAttrValueEntity;
@@ -28,6 +29,13 @@ import org.springframework.web.bind.annotation.*;
 public class SkuSaleAttrValueController {
     @Autowired
     private SkuSaleAttrValueService skuSaleAttrValueService;
+
+    @GetMapping("{spuId}")//根据spuId查询Sku，在根据sku查询销售属性
+    public Resp<List<SkuSaleAttrValueEntity>> querSaleAttrValues(@PathVariable("spuId")Long spuId){
+
+        List<SkuSaleAttrValueEntity> skuSaleAttrValueEntities= this.skuSaleAttrValueService.querySaleValues(spuId);
+        return Resp.ok(skuSaleAttrValueEntities) ;
+    }
 
     /**
      * 列表

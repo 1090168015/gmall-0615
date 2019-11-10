@@ -6,18 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="gmall-item" />
         <module name="gmall-sms-interface" />
         <module name="gmall-oms" />
         <module name="gmall-pms" />
+        <module name="gmall-generator" />
         <module name="gmall-sms" />
         <module name="gmall-ums" />
         <module name="gmall-wms" />
         <module name="gmall-pms-interface" />
+        <module name="gmall-admin" />
+        <module name="gmall-gateway" />
         <module name="gmall-index" />
         <module name="gmall-wms-interface" />
-        <module name="gmall-gateway" />
-        <module name="gmall-admin" />
-        <module name="gmall-generator" />
         <module name="gmall-core" />
         <module name="gmall-search" />
       </profile>
@@ -36,6 +37,7 @@
       <module name="gmall-gateway" options="-parameters" />
       <module name="gmall-generator" options="-parameters" />
       <module name="gmall-index" options="-parameters" />
+      <module name="gmall-item" options="-parameters" />
       <module name="gmall-oms" options="-parameters" />
       <module name="gmall-pms" options="-parameters" />
       <module name="gmall-search" options="-parameters" />

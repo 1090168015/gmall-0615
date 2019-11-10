@@ -3,11 +3,9 @@ package com.atguigu.gmall.pms.api;
 import com.atguigu.gmall.core.bean.PageVo;
 import com.atguigu.gmall.core.bean.QueryCondition;
 import com.atguigu.gmall.core.bean.Resp;
-import com.atguigu.gmall.pms.entity.BrandEntity;
-import com.atguigu.gmall.pms.entity.CategoryEntity;
-import com.atguigu.gmall.pms.entity.SkuInfoEntity;
-import com.atguigu.gmall.pms.entity.SpuInfoEntity;
+import com.atguigu.gmall.pms.entity.*;
 import com.atguigu.gmall.pms.vo.CategoryVO;
+import com.atguigu.gmall.pms.vo.GroupVO;
 import com.atguigu.gmall.pms.vo.SpuAttributeValueVO;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
@@ -16,6 +14,20 @@ import java.util.List;
 
 
 public interface GmallPmsApi {//用于远程调用pmscontroller方法
+
+    @GetMapping("pms/attrgroup/item/group/{cid}/{spuId}")
+    public Resp<List<GroupVO>> queryGroupVOByCid(@PathVariable("cid") Long cid, @PathVariable("spuId") Long spuId);
+    @GetMapping("pms/spuinfodesc/info/{spuId}")//根据spuId查询商品描述信息
+    public Resp<SpuInfoDescEntity> querySpuDescById(@PathVariable("spuId") Long spuId);
+    @GetMapping("pms/skusaleattrvalue/{spuId}")//根据spuId查询SkuId，再根据skuId查询销售属性
+    public Resp<List<SkuSaleAttrValueEntity>> querSaleAttrValues(@PathVariable("spuId")Long spuId);
+    @GetMapping("pms/skuimages/{skuId}")//根据skuId获取sku图片地址
+    public Resp<List<String>> queryPicsBySkuId(@PathVariable("skuId") Long skuId);
+    @GetMapping("pms/spuinfo/info/{id}")//根据spuId查询spu信息
+    public Resp<SpuInfoEntity> querySpuById(@PathVariable("id") Long id);
+    @GetMapping("pms/skuinfo/info/{skuId}")//根据skuId查询sku信息
+    public Resp<SkuInfoEntity> querySkuById(@PathVariable("skuId") Long skuId);
+
 
     @PostMapping("pms/spuinfo/list")
     public Resp<List<SpuInfoEntity>> querySpuPage(@RequestBody QueryCondition queryCondition);

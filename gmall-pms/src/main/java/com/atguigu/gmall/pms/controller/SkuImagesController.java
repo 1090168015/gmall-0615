@@ -1,6 +1,8 @@
 package com.atguigu.gmall.pms.controller;
 
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 
 import com.atguigu.gmall.pms.entity.SkuImagesEntity;
@@ -8,6 +10,7 @@ import com.atguigu.gmall.pms.service.SkuImagesService;
 import com.atguigu.gmall.core.bean.PageVo;
 import com.atguigu.gmall.core.bean.QueryCondition;
 import com.atguigu.gmall.core.bean.Resp;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +31,15 @@ import org.springframework.web.bind.annotation.*;
 public class SkuImagesController {
     @Autowired
     private SkuImagesService skuImagesService;
+
+    @GetMapping("{skuId}")//根据skuId获取sku图片地址
+    public Resp<List<String>> queryPicsBySkuId(@PathVariable("skuId") Long skuId){
+        List<SkuImagesEntity> skuImagesEntities = this.skuImagesService.list(new QueryWrapper<SkuImagesEntity>().eq("sku_id", skuId));
+        List<String> stringList = skuImagesEntities.stream().map(skuImagesEntity -> skuImagesEntity.getImgUrl()).collect(Collectors.toList());
+        return Resp.ok(stringList);
+
+
+    }
 
     /**
      * 列表
