@@ -28,6 +28,25 @@ import org.springframework.web.bind.annotation.*;
 public class MemberController {
     @Autowired
     private MemberService memberService;
+    @GetMapping("query")//用户其他工程远程调用，用户登录
+    public Resp<MemberEntity> queryUser(@RequestParam("username")String username,@RequestParam("password")String password){
+        MemberEntity memberEntity= this.memberService.queryUser(username,password);
+        return Resp.ok(memberEntity);
+
+    }
+
+    @PostMapping("register")//用户注册
+    public Resp<Object> register(MemberEntity memberEntity,@RequestParam("code")String code){
+        this.memberService.register(memberEntity,code);
+        return Resp.ok(null);
+    }
+
+    @GetMapping("check/{data}/{type}")//验证注册信息是否可用
+    public Resp<Boolean> checkData(@PathVariable("data")String data,@PathVariable("type") Integer type){
+       Boolean b = memberService.checkData(data,type);
+       return  Resp.ok(b);
+
+    }
 
     /**
      * 列表

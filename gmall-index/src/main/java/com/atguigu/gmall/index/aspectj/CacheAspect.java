@@ -51,11 +51,14 @@ public class CacheAspect {
             JSON.parseObject(jsonString,returnType);
         }*/
         //查询缓存
+
         Object result = this.cacheHit(key, returnType);
         //如果缓存中有，直接返回，
         if (result != null) {
+//            System.out.println("-------------------------------");
             return  result;
         }
+//        System.out.println("++++++++++++++++++++++++");
 
         //初始化分布式锁
         // 相同pid的共用同一把锁，即使这个pid的数据缓存中没有不妨碍别的数据的执行，只锁当前资源，相同方法参数的资源共用同一把锁
@@ -82,7 +85,7 @@ public class CacheAspect {
         String jsonString = this.redisTemplate.opsForValue().get(key);
         //如果缓存中有，直接返回
         if (StringUtils.isNotBlank(jsonString)){
-            JSON.parseObject(jsonString,returnType);//将在redis中根据key查询到的数据转化为对应的对象
+           return JSON.parseObject(jsonString,returnType);//将在redis中根据key查询到的数据转化为对应的对象
         }
         return  null;
 

@@ -14,15 +14,12 @@ public @interface GmallCache {
     * */
     @AliasFor("value")
     String prefix() default "cache";
-
     @AliasFor("prefix")
     String value() default "cache";
-
     /*
     * 缓存的过期时间，单位是秒
     * */
     long timeout() default 300L;
-
     /*
     * 为防止缓存雪崩，而设置的过期时间的随机值范围
     * */
