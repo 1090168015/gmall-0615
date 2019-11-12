@@ -10,7 +10,7 @@ import com.atguigu.gmall.core.bean.Query;
 import com.atguigu.gmall.core.bean.QueryCondition;
 
 import com.atguigu.gmall.ums.dao.MemberReceiveAddressDao;
-import com.atguigu.gmall.ums.entity.MemberReceiveAddressEntity;
+import com.atguigu.gmall.usm.entity.MemberReceiveAddressEntity;
 
 
 @Service("memberReceiveAddressService")

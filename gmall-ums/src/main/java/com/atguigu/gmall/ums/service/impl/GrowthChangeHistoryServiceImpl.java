@@ -10,7 +10,7 @@ import com.atguigu.gmall.core.bean.Query;
 import com.atguigu.gmall.core.bean.QueryCondition;
 
 import com.atguigu.gmall.ums.dao.GrowthChangeHistoryDao;
-import com.atguigu.gmall.ums.entity.GrowthChangeHistoryEntity;
+import com.atguigu.gmall.usm.entity.GrowthChangeHistoryEntity;
 
 
 @Service("growthChangeHistoryService")

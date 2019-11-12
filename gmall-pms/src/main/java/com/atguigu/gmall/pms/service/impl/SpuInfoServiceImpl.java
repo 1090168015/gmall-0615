@@ -112,7 +112,7 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
         saveSku(spuInfoVO, spuId);
      //   int i =1/0;
 
-        sendMsg(spuId,"insert");
+        sendMsg(spuId,"insert");//发送消息对的方法在下面
 
       //  sendMsgSecond(spuId,"insert");
 

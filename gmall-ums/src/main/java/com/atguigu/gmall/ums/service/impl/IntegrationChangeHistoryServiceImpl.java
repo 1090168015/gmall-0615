@@ -10,7 +10,7 @@ import com.atguigu.gmall.core.bean.Query;
 import com.atguigu.gmall.core.bean.QueryCondition;
 
 import com.atguigu.gmall.ums.dao.IntegrationChangeHistoryDao;
-import com.atguigu.gmall.ums.entity.IntegrationChangeHistoryEntity;
+import com.atguigu.gmall.usm.entity.IntegrationChangeHistoryEntity;
 
 
 @Service("integrationChangeHistoryService")

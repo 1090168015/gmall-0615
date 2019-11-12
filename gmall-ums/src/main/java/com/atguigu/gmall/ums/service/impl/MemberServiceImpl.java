@@ -12,7 +12,7 @@ import com.atguigu.gmall.core.bean.Query;
 import com.atguigu.gmall.core.bean.QueryCondition;
 
 import com.atguigu.gmall.ums.dao.MemberDao;
-import com.atguigu.gmall.ums.entity.MemberEntity;
+import com.atguigu.gmall.usm.entity.MemberEntity;
 
 import java.util.Date;
 import java.util.UUID;

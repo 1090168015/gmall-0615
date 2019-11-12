@@ -10,7 +10,7 @@ import com.atguigu.gmall.core.bean.Query;
 import com.atguigu.gmall.core.bean.QueryCondition;
 
 import com.atguigu.gmall.ums.dao.MemberStatisticsInfoDao;
-import com.atguigu.gmall.ums.entity.MemberStatisticsInfoEntity;
+import com.atguigu.gmall.usm.entity.MemberStatisticsInfoEntity;
 
 
 @Service("memberStatisticsInfoService")

@@ -3,7 +3,7 @@ package com.atguigu.gmall.ums.controller;
 import java.util.Arrays;
 
 
-import com.atguigu.gmall.ums.entity.GrowthChangeHistoryEntity;
+import com.atguigu.gmall.usm.entity.GrowthChangeHistoryEntity;
 import com.atguigu.gmall.ums.service.GrowthChangeHistoryService;
 import com.atguigu.gmall.core.bean.PageVo;
 import com.atguigu.gmall.core.bean.QueryCondition;

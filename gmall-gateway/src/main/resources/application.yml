@@ -10,6 +10,8 @@ spring:
           uri: lb://pms-server
           predicates:
             - Path=/pms/**
+          filters:
+          #  - AuthGateWayFilterFactory
         - id: oms-route
           uri: lb://oms-server
           predicates:
@@ -38,7 +40,24 @@ spring:
             - Path=/api/index/**
           filters:
             - RewritePath=/api(?<segment>/?.*), $\{segment}
+        - id: item-route
+          uri: lb://item-service
+          predicates:
+            - Path=/api/item/**
+          filters:
+            - RewritePath=/api(?<segment>/?.*), $\{segment}
+        - id: auth-route
+          uri: lb://auth-service
+          predicates:
+            - Path=/api/auth/**
+          filters:
+            - RewritePath=/api(?<segment>/?.*), $\{segment}
 
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
+
+auth:   #将公钥配置，与cookieName配置用于java配置类获取配置文件的属性值，用于网关解析用户访问时带来的token（jwt）数据
+  jwt:
+    publicKeyPath: D:\\develop_code\\tmp\\rsa.pub
+    cookieName: GMALL_TOKEN

@@ -10,7 +10,7 @@ import com.atguigu.gmall.core.bean.Query;
 import com.atguigu.gmall.core.bean.QueryCondition;
 
 import com.atguigu.gmall.ums.dao.MemberLoginLogDao;
-import com.atguigu.gmall.ums.entity.MemberLoginLogEntity;
+import com.atguigu.gmall.usm.entity.MemberLoginLogEntity;
 
 
 @Service("memberLoginLogService")

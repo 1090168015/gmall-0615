@@ -31,46 +31,7 @@ public class ItemService {
     @Autowired
     private ThreadPoolExecutor threadPoolExecutor;
 
-    /*public ItemVO item(Long skuId) {
-        ItemVO itemVO = new ItemVO();
-        // 1. 查询sku信息
-        Resp<SkuInfoEntity> skuInfoEntityResp = gmallPmsClient.querySkuById(skuId);
-        SkuInfoEntity skuInfoEntity = skuInfoEntityResp.getData();
-        BeanUtils.copyProperties(skuInfoEntity,itemVO);
-        Long spuId = skuInfoEntity.getSpuId();
 
-        // 2.品牌
-        Resp<BrandEntity> brandEntityResp = this.gmallPmsClient.queryBrandBySpuId(skuInfoEntity.getBrandId());
-        itemVO.setBrand(brandEntityResp.getData());
-        // 3.分类
-        Resp<CategoryEntity> categoryEntityResp = this.gmallPmsClient.queryCategoryBySpuId(skuInfoEntity.getCatalogId());
-        itemVO.setCategory(categoryEntityResp.getData());
-        // 4.spu信息
-        Resp<SpuInfoEntity> spuInfoEntityResp = this.gmallPmsClient.querySpuById(spuId);
-        itemVO.setSpuInfo(spuInfoEntityResp.getData());
-        // 5.设置图片信息
-        Resp<List<String>> picsResp = this.gmallPmsClient.queryPicsBySkuId(skuId);
-        itemVO.setPic(picsResp.getData());
-        // 6.营销信息
-        Resp<List<ItemSaleVO>> itemSalveResp = this.gmallSmsClient.queryItemSalveVOs(skuId);
-        itemVO.setSales(itemSalveResp.getData());
-
-        // 7.是否有货
-        Resp<List<WareSkuEntity>> wareResp = this.gmallWmsClient.queryWareBySkuId(skuId);
-        List<WareSkuEntity> wareSkuEntities = wareResp.getData();
-        itemVO.setStore(wareSkuEntities.stream().anyMatch(t ->t.getStock()>0));
-        // 8.spu所有的销售属性
-        Resp<List<SkuSaleAttrValueEntity>> saleAttrValueResp = this.gmallPmsClient.querSaleAttrValues(spuId);
-        itemVO.setSkuSales(saleAttrValueResp.getData());
-        // 9.spu的描述信息
-        Resp<SpuInfoDescEntity> spuInfoDescEntityResp = this.gmallPmsClient.querySpuDescById(spuId);
-        itemVO.setDesc(spuInfoDescEntityResp.getData());
-        // 10.规格属性分组及组下的规格参数及值
-        Resp<List<GroupVO>> listResp = this.gmallPmsClient.queryGroupVOByCid(skuInfoEntity.getCatalogId(), spuId);
-        itemVO.setGroups(listResp.getData());
-        return itemVO;
-
-    }*/
     public ItemVO item(Long skuId) {
         ItemVO itemVO = new ItemVO();
         // 1. 查询sku信息
@@ -280,4 +241,126 @@ thenRun方法：只要上面的任务执行完成，就开始执行thenRun，只
         }
         System.out.println("线程执行");
     }
+}*/
+/*public ItemVO item(Long skuId) {
+         ItemVO itemVO = new ItemVO();
+         // 1. 查询sku信息
+         Resp<SkuInfoEntity> skuInfoEntityResp = gmallPmsClient.querySkuById(skuId);
+         SkuInfoEntity skuInfoEntity = skuInfoEntityResp.getData();
+         BeanUtils.copyProperties(skuInfoEntity,itemVO);
+         Long spuId = skuInfoEntity.getSpuId();
+
+         // 2.品牌
+         Resp<BrandEntity> brandEntityResp = this.gmallPmsClient.queryBrandBySpuId(skuInfoEntity.getBrandId());
+         itemVO.setBrand(brandEntityResp.getData());
+         // 3.分类
+         Resp<CategoryEntity> categoryEntityResp = this.gmallPmsClient.queryCategoryBySpuId(skuInfoEntity.getCatalogId());
+         itemVO.setCategory(categoryEntityResp.getData());
+         // 4.spu信息
+         Resp<SpuInfoEntity> spuInfoEntityResp = this.gmallPmsClient.querySpuById(spuId);
+         itemVO.setSpuInfo(spuInfoEntityResp.getData());
+         // 5.设置图片信息
+         Resp<List<String>> picsResp = this.gmallPmsClient.queryPicsBySkuId(skuId);
+         itemVO.setPic(picsResp.getData());
+         // 6.营销信息
+         Resp<List<ItemSaleVO>> itemSalveResp = this.gmallSmsClient.queryItemSalveVOs(skuId);
+         itemVO.setSales(itemSalveResp.getData());
+
+         // 7.是否有货
+         Resp<List<WareSkuEntity>> wareResp = this.gmallWmsClient.queryWareBySkuId(skuId);
+         List<WareSkuEntity> wareSkuEntities = wareResp.getData();
+         itemVO.setStore(wareSkuEntities.stream().anyMatch(t ->t.getStock()>0));
+         // 8.spu所有的销售属性
+         Resp<List<SkuSaleAttrValueEntity>> saleAttrValueResp = this.gmallPmsClient.querSaleAttrValues(spuId);
+         itemVO.setSkuSales(saleAttrValueResp.getData());
+         // 9.spu的描述信息
+         Resp<SpuInfoDescEntity> spuInfoDescEntityResp = this.gmallPmsClient.querySpuDescById(spuId);
+         itemVO.setDesc(spuInfoDescEntityResp.getData());
+         // 10.规格属性分组及组下的规格参数及值
+         Resp<List<GroupVO>> listResp = this.gmallPmsClient.queryGroupVOByCid(skuInfoEntity.getCatalogId(), spuId);
+         itemVO.setGroups(listResp.getData());
+         return itemVO;
+
+     }*/
+/*
+public ItemVO item1(Long skuId) {
+    ItemVO itemVO = new ItemVO();
+    // 1. 查询sku信息
+    */
+/*- runAsync方法不支持返回值。
+        - supplyAsync可以支持返回值。
+
+ 线程串行化方法
+thenApply 方法：当一个线程依赖另一个线程时，获取上一个任务返回的结果，并返回当前任务的返回值。
+thenAccept方法：消费处理结果。接收任务的处理结果，并消费处理，无返回结果。
+thenRun方法：只要上面的任务执行完成，就开始执行thenRun，只是处理完任务后，执行 thenRun的后续操作
+       带有Async默认是异步执行的。这里所谓的异步指的是不在当前线程内执行。
+        *//*
+
+    CompletableFuture<SkuInfoEntity> skuInfoEntityCompletableFuture = CompletableFuture.supplyAsync(() -> {
+        Resp<SkuInfoEntity> skuInfoEntityResp = gmallPmsClient.querySkuById(skuId);
+        SkuInfoEntity skuInfoEntity = skuInfoEntityResp.getData();
+        BeanUtils.copyProperties(skuInfoEntity, itemVO);
+        return skuInfoEntity;
+
+    }, threadPoolExecutor);
+
+    // 2.品牌
+    skuInfoEntityCompletableFuture.thenAcceptAsync(skuInfoEntity->{
+        Resp<BrandEntity> brandEntityResp = this.gmallPmsClient.queryBrandBySpuId(skuInfoEntity.getBrandId());
+        itemVO.setBrand(brandEntityResp.getData());
+    },threadPoolExecutor);
+
+    // 3.分类
+    skuInfoEntityCompletableFuture.thenAcceptAsync(skuInfoEntity->{
+        Resp<CategoryEntity> categoryEntityResp = this.gmallPmsClient.queryCategoryBySpuId(skuInfoEntity.getCatalogId());
+        itemVO.setCategory(categoryEntityResp.getData());
+    },threadPoolExecutor);
+
+    // 4.spu信息
+    skuInfoEntityCompletableFuture.thenAcceptAsync(skuInfoEntity->{
+        Resp<SpuInfoEntity> spuInfoEntityResp = this.gmallPmsClient.querySpuById(skuInfoEntity.getSpuId());
+        itemVO.setSpuInfo(spuInfoEntityResp.getData());
+    },threadPoolExecutor);
+
+    // 5.设置图片信息
+    CompletableFuture.runAsync(()->{
+        Resp<List<String>> picsResp = this.gmallPmsClient.queryPicsBySkuId(skuId);
+        itemVO.setPic(picsResp.getData());
+    },threadPoolExecutor);
+
+    // 6.营销信息
+    CompletableFuture.runAsync(()->{
+        Resp<List<ItemSaleVO>> itemSalveResp = this.gmallSmsClient.queryItemSalveVOs(skuId);
+        itemVO.setSales(itemSalveResp.getData());
+    },threadPoolExecutor);
+
+
+    // 7.是否有货
+    CompletableFuture.runAsync(()->{
+
+        Resp<List<WareSkuEntity>> wareResp = this.gmallWmsClient.queryWareBySkuId(skuId);
+        List<WareSkuEntity> wareSkuEntities = wareResp.getData();
+        itemVO.setStore(wareSkuEntities.stream().anyMatch(t -> t.getStock() > 0));
+    },threadPoolExecutor);
+
+    // 8.spu所有的销售属性
+    skuInfoEntityCompletableFuture.thenAcceptAsync(skuInfoEntity->{
+        Resp<List<SkuSaleAttrValueEntity>> saleAttrValueResp = this.gmallPmsClient.querSaleAttrValues(skuInfoEntity.getSpuId());
+        itemVO.setSkuSales(saleAttrValueResp.getData());
+    },threadPoolExecutor);
+
+    // 9.spu的描述信息
+    skuInfoEntityCompletableFuture.thenAcceptAsync(skuInfoEntity->{
+        Resp<SpuInfoDescEntity> spuInfoDescEntityResp = this.gmallPmsClient.querySpuDescById(skuInfoEntity.getSpuId());
+        itemVO.setDesc(spuInfoDescEntityResp.getData());
+    },threadPoolExecutor);
+
+    // 10.规格属性分组及组下的规格参数及值
+    skuInfoEntityCompletableFuture.thenAcceptAsync(skuInfoEntity->{
+        Resp<List<GroupVO>> listResp = this.gmallPmsClient.queryGroupVOByCid(skuInfoEntity.getCatalogId(), skuInfoEntity.getSpuId());
+        itemVO.setGroups(listResp.getData());
+    },threadPoolExecutor);
+    CompletableFuture.allOf();
+    return itemVO;}
 }*/

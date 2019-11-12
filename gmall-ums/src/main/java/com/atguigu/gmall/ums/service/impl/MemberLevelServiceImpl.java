@@ -10,7 +10,7 @@ import com.atguigu.gmall.core.bean.Query;
 import com.atguigu.gmall.core.bean.QueryCondition;
 
 import com.atguigu.gmall.ums.dao.MemberLevelDao;
-import com.atguigu.gmall.ums.entity.MemberLevelEntity;
+import com.atguigu.gmall.usm.entity.MemberLevelEntity;
 
 
 @Service("memberLevelService")

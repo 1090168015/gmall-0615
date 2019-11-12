@@ -3,7 +3,7 @@ package com.atguigu.gmall.ums.controller;
 import java.util.Arrays;
 
 
-import com.atguigu.gmall.ums.entity.MemberEntity;
+import com.atguigu.gmall.usm.entity.MemberEntity;
 import com.atguigu.gmall.ums.service.MemberService;
 import com.atguigu.gmall.core.bean.PageVo;
 import com.atguigu.gmall.core.bean.QueryCondition;

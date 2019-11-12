@@ -1,7 +1,7 @@
 package com.atguigu.gmall.ums.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.atguigu.gmall.ums.entity.MemberLevelEntity;
+import com.atguigu.gmall.usm.entity.MemberLevelEntity;
 import com.atguigu.gmall.core.bean.PageVo;
 import com.atguigu.gmall.core.bean.QueryCondition;
 
