@@ -14,7 +14,8 @@ import java.util.List;
 
 
 public interface GmallPmsApi {//用于远程调用pmscontroller方法
-
+    @GetMapping("pms/skusaleattrvalue/sku/{skuId}")//根据sku查询销售属性
+    public Resp<List<SkuSaleAttrValueEntity>> querSaleAttrBySkuId(@PathVariable("skuId")Long skuId);
     @GetMapping("pms/attrgroup/item/group/{cid}/{spuId}")
     public Resp<List<GroupVO>> queryGroupVOByCid(@PathVariable("cid") Long cid, @PathVariable("spuId") Long spuId);
     @GetMapping("pms/spuinfodesc/info/{spuId}")//根据spuId查询商品描述信息

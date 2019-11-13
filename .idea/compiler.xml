@@ -16,10 +16,11 @@
         <module name="gmall-wms" />
         <module name="gmall-pms-interface" />
         <module name="gmall-admin" />
+        <module name="gmall-ums-interface" />
         <module name="gmall-gateway" />
         <module name="gmall-index" />
         <module name="gmall-wms-interface" />
-        <module name="gmall-ums-interface" />
+        <module name="gmall-cart" />
         <module name="gmall-core" />
         <module name="gmall-auth" />
         <module name="gmall-search" />
@@ -37,6 +38,7 @@
       <module name="elasticsearchdemo" options="" />
       <module name="gmall-admin" options="-parameters" />
       <module name="gmall-auth" options="-parameters" />
+      <module name="gmall-cart" options="-parameters" />
       <module name="gmall-gateway" options="-parameters" />
       <module name="gmall-generator" options="-parameters" />
       <module name="gmall-index" options="-parameters" />
