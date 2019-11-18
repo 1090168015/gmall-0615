@@ -7,6 +7,7 @@ import com.atguigu.gmall.oms.service.OrderService;
 import com.atguigu.gmall.core.bean.PageVo;
 import com.atguigu.gmall.core.bean.QueryCondition;
 import com.atguigu.gmall.core.bean.Resp;
+import com.atguigu.gmall.oms.vo.OrderSubmitVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,15 @@ import com.atguigu.gmall.oms.entity.OrderEntity;
 public class OrderController {
     @Autowired
     private OrderService orderService;
+
+
+    @ApiOperation("创建订单)")
+    @PostMapping//根据传的请求提交参数，创建订单，订单实例OrderEntity
+    public Resp<OrderEntity> createOrder(@RequestBody OrderSubmitVO submitVO) {
+        OrderEntity orderEntity = orderService.createOrder(submitVO);
+
+        return Resp.ok(orderEntity);
+    }
 
     /**
      * 列表

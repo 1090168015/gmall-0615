@@ -4,7 +4,8 @@ import com.atguigu.gmall.cart.config.Jwtproperties;
 import com.atguigu.gmall.cart.interceptor.LoginInterceptor;
 import com.atguigu.gmall.cart.service.CartService;
 import com.atguigu.gmall.cart.vo.Cart;
-import com.atguigu.gmall.cart.vo.UserInfo;
+import com.atguigu.gmall.cart.vo.CartItemVO;
+import com.atguigu.gmall.core.bean.UserInfo;
 import com.atguigu.gmall.core.bean.Resp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -19,6 +20,14 @@ public class CartController {
 
     @Autowired
     private CartService cartService;
+
+    @GetMapping("order/{userId}")
+    public Resp<List<CartItemVO>> queryCartItemVO(@PathVariable("userId") Long userId){//查出登录用户购物车信息
+        List<CartItemVO> cartItemVOS=this.cartService.queryCartItemVO(userId);
+        return Resp.ok(cartItemVOS);
+
+    }
+
     @PostMapping
     public Resp<Object> addCart(@RequestBody Cart cart){//添加购物车
         this.cartService.addCart(cart);

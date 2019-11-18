@@ -1,2 +1,9 @@
+spring:
+  rabbitmq:
+    host: 192.168.20.100
+    virtual-host: /xiangge
+    username: xiangge
+    password: xiangge
+
 
 

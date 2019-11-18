@@ -25,7 +25,8 @@ public class GoodsVO {
     //保存当前sku所有需要检索的属性；
     //检索属性来源于spu的基本属性中的search_type=1（销售属性都已经拼接在标题中了）
     private List<SpuAttributeValueVO> attrValueList;//检索属性,
-    // (要判断是不是检索属性，要在pms_attr属性表里查看search_type类型，所以要将pms_product_attr_value与pms_attr进行关联查询是否是检索属性，根据spu_id与search_type是否等于1进行查询)
+    // (要判断是不是检索属性，要在pms_attr属性表里查看search_type类型，所以要将pms_product_attr_value与pms_attr进行关联查询是否是检索属性，
+    // 根据spu_id与search_type是否等于1进行查询)
     //由于是属性表与属性值表进行关联查询，所以在AttrController或者ProductAttrValueController添加查询检索属性的controller方法都可以
 }
 

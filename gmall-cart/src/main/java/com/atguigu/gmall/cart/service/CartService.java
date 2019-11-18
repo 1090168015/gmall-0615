@@ -6,7 +6,8 @@ import com.atguigu.gmall.cart.fegin.GmallPmsClient;
 import com.atguigu.gmall.cart.fegin.GmallSmsClient;
 import com.atguigu.gmall.cart.interceptor.LoginInterceptor;
 import com.atguigu.gmall.cart.vo.Cart;
-import com.atguigu.gmall.cart.vo.UserInfo;
+import com.atguigu.gmall.cart.vo.CartItemVO;
+import com.atguigu.gmall.core.bean.UserInfo;
 import com.atguigu.gmall.core.bean.Resp;
 import com.atguigu.gmall.pms.entity.SkuInfoEntity;
 import com.atguigu.gmall.pms.entity.SkuSaleAttrValueEntity;
@@ -16,6 +17,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -30,6 +32,8 @@ public class CartService {
     private GmallSmsClient gmallSmsClient;
 
     private static final String KEY_PREFIX="cart:key:";//在redis中保存购物车时，保存购物车的键的前缀
+
+    private static final String CURRENT_PRICE_PRFIX="cart:price:";
 
     public void addCart(Cart cart) {
         /*String key =KEY_PREFIX;
@@ -75,6 +79,8 @@ public class CartService {
             //查询营销信息,优惠信息
             Resp<List<ItemSaleVO>> listResp1 = this.gmallSmsClient.queryItemSalveVOs(cart.getSkuId());
             cart.setSales(listResp1.getData());
+            //保存当前价格，从数据库以skuId查询商品对应的最新的价格，保存到redis中
+            this.redisTemplate.opsForValue().set(CURRENT_PRICE_PRFIX+skuId,skuInfoEntity.getPrice().toString());//添加当前价格
             //将新增商品购物车保存到redis中
      //       hashOps.put(skuId,JSON.toJSONString(cart));//可以在外部统一更新
         }
@@ -86,17 +92,21 @@ public class CartService {
     public List<Cart> queryCarts() {
         //查询未登录状态的购物车（游客购物车）    //游客保存cookie的键对应的属性是userKey
         UserInfo userInfo = LoginInterceptor.get();
-        String userKey = userInfo.getUserKey();
-        String key1 =KEY_PREFIX+userKey;
-        BoundHashOperations<String, Object, Object> userKeyOps = this.redisTemplate.boundHashOps(key1);
-        List<Object> cartJsonList = userKeyOps.values();
+        String userKey = userInfo.getUserKey();//游客
+        String key1 =KEY_PREFIX+userKey;//游客redis中购物车对应的键
+        BoundHashOperations<String, Object, Object> userKeyOps = this.redisTemplate.boundHashOps(key1);//获取游客购物车操作对象
+        List<Object> cartJsonList = userKeyOps.values();//游客购物车
        /* if (CollectionUtils.isEmpty(cartJsonList)){
             return  null;//不能直接返回，因为未登录是游客有可能不添加购物车，而用户有可能添加购物车，这时直接返回，下面查询登录用户购物车就无法查询，直接判断不为空时，反序列化即可
         }*/
         List<Cart> userKeyCarts =null;
-        if (!CollectionUtils.isEmpty(cartJsonList)){
+        if (!CollectionUtils.isEmpty(cartJsonList)){//判断游客购物车是否为空
             //游客购物车集合
-            userKeyCarts = cartJsonList.stream().map(cartJson -> JSON.parseObject(cartJson.toString(), Cart.class)).collect(Collectors.toList());
+            userKeyCarts = cartJsonList.stream().map(cartJson -> {
+                Cart cart = JSON.parseObject(cartJson.toString(), Cart.class);//游客购物车对象
+                cart.setCurrentPrice(new BigDecimal( this.redisTemplate.opsForValue().get(CURRENT_PRICE_PRFIX+cart.getSkuId())));//因为在redis中添加了最新商品价格的redis的键值对，所以可以从redis中获取
+                return cart;
+            }).collect(Collectors.toList());
         }
         //判断登录状态
         if (userInfo.getUserId()==null){
@@ -104,13 +114,13 @@ public class CartService {
             return userKeyCarts;
         }
         //登录时，查询登录状态购物车
-        String  key2 =KEY_PREFIX+userInfo.getUserId();
-        BoundHashOperations<String, Object, Object> userIdOps = this.redisTemplate.boundHashOps(key2);
-        //判断未登录的购物车是否为空
-        if (!CollectionUtils.isEmpty(userKeyCarts)){
-            //不为空，合并
+        String  key2 =KEY_PREFIX+userInfo.getUserId();//登录客户在redis中保存购物车的键
+        BoundHashOperations<String, Object, Object> userIdOps = this.redisTemplate.boundHashOps(key2);//获取登录用户购物车操作对象
+        //合并购物车，
+        if (!CollectionUtils.isEmpty(userKeyCarts)){//判断未登录的购物车是否为空
+            //如果游客购物车不为空，合并，合并是将数量合并
             userKeyCarts.forEach(cart -> {//遍历游客购物场车cart，
-                //有更新数量
+                //游客有购物车，更新数量
                 if (userIdOps.hasKey(cart.getSkuId().toString())){//判断登录用户是否有游客购物车里的商品id即skuId，如果有直接更新数量
                     String cartJson = userIdOps.get(cart.getSkuId().toString()).toString();
                     Cart idCart = JSON.parseObject(cartJson, Cart.class);//获取登录用户商品购物车
@@ -126,9 +136,15 @@ public class CartService {
 
         }
         //未登录状态购物车为空（游客购物车为空），直接返回登录状态购物车
-        List<Object> userIdCartJsonList = userIdOps.values();
-        System.out.println(userIdCartJsonList);
-        return userIdCartJsonList.stream().map(userIdCartJson->JSON.parseObject(userIdCartJson.toString(),Cart.class)).collect(Collectors.toList());
+        List<Object> userIdCartJsonList = userIdOps.values();//用户登录状态对应的redis中购物车集合
+        if (CollectionUtils.isEmpty(userIdCartJsonList)){//如果登录时购物车为空，直接返回
+            return null;
+        }
+        return userIdCartJsonList.stream().map(userIdCartJson->{
+            Cart cart = JSON.parseObject(userIdCartJson.toString(), Cart.class);//登录状态购物车
+            cart.setCurrentPrice(new BigDecimal(this.redisTemplate.opsForValue().get(CURRENT_PRICE_PRFIX+cart.getSkuId())));//获取最新价格并返回
+            return cart;
+        }).collect(Collectors.toList());
     }
 
 
@@ -179,6 +195,30 @@ public class CartService {
             key+=userInfo.getUserKey();//使用游客id拼接成此游客在redis中保存购物车对应的键
         }
         return key;
+    }
+
+    public List<CartItemVO> queryCartItemVO(Long userId) {
+   //     UserInfo userInfo = LoginInterceptor.get();
+        //登录时，查询登录状态购物车
+        String  key =KEY_PREFIX+userId;//登录客户在redis中保存购物车的键
+        BoundHashOperations<String, Object, Object> userIdOps = this.redisTemplate.boundHashOps(key);//获取登录用户购物车操作对象
+        //查询返回
+        List<Object> userIdCartJsonList = userIdOps.values();//用户登录状态对应的redis中购物车集合
+        if (CollectionUtils.isEmpty(userIdCartJsonList)){//如果登录时购物车为空，直接返回
+            return null;
+        }
+        //获取登录用户所有购物车记录
+        return userIdCartJsonList.stream().map(userIdCartJson -> {
+            Cart cart = JSON.parseObject(userIdCartJson.toString(), Cart.class);//登录状态购物车
+            cart.setCurrentPrice(new BigDecimal(this.redisTemplate.opsForValue().get(CURRENT_PRICE_PRFIX + cart.getSkuId())));//获取最新价格并返回
+            return cart;
+        }).filter(cart -> cart.getCheck()).map(cart->{//过滤选中的购物车商品
+            CartItemVO cartItemVO = new CartItemVO();//将购物车商品封装为所需要的对象返回，供订单工程调用获取数据
+            cartItemVO.setSkuId(cart.getSkuId());
+            cartItemVO.setCount(cart.getCount());
+            return cartItemVO;
+
+        }).collect(Collectors.toList());
 
     }
 }

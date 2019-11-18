@@ -18,12 +18,14 @@
         <option value="$PROJECT_DIR$/gmall-auther/pom.xml" />
         <option value="$PROJECT_DIR$/gmall-auth/pom.xml" />
         <option value="$PROJECT_DIR$/gmall-cart/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall-order/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/elasticsearch-demo/pom.xml" />
         <option value="$PROJECT_DIR$/gmall-pms/elasticsearch-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/mall-cart-interface/pom.xml" />
       </set>
     </option>
   </component>

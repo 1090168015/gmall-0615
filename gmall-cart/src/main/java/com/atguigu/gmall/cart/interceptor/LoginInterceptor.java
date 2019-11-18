@@ -1,7 +1,7 @@
 package com.atguigu.gmall.cart.interceptor;
 
 import com.atguigu.gmall.cart.config.Jwtproperties;
-import com.atguigu.gmall.cart.vo.UserInfo;
+import com.atguigu.gmall.core.bean.UserInfo;
 import com.atguigu.gmall.core.utils.CookieUtils;
 import com.atguigu.gmall.core.utils.JwtUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -16,7 +16,7 @@ import java.util.Map;
 import java.util.UUID;
 
 @Component//编写拦截器
-@EnableConfigurationProperties(Jwtproperties.class)
+@EnableConfigurationProperties(Jwtproperties.class)//拦截器，拦截所有请求，判断用户登录状态，是登录用户还是游客
 public class LoginInterceptor extends HandlerInterceptorAdapter {//继承拦截器适配器
     //如果编辑好拦截器之后直接使用，没有效果，是因为没有配置拦截路径，需要配置拦截路径，这里不适用配置文件的形式，使用配置类的形式
     @Autowired

@@ -45,7 +45,7 @@ private String[] props;//页面提交的数组,搜索规格的属性
 private Integer pageSize = 12;
 private Integer priceFrom;//价格区间开始
 private Integer priceTo;//价格区间结束*/
-public class SearchModel {
+public class SearchSecond {
     @Autowired
     private JestClient jestClient;
 

@@ -1,0 +1,18 @@
+server:
+  port: 8092
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  redis:
+    host: 192.168.20.100
+  rabbitmq:
+    host: 192.168.20.100
+    virtual-host: /xiangge
+    username: xiangge
+    password: xiangge
+auth:
+  jwt:
+    publicKeyPath: D:\\develop_code\\tmp\\rsa.pub
+    cookieName: GMALL_TOKEN

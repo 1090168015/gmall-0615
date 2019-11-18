@@ -30,6 +30,7 @@ public class AuthServiceImpl implements AuthService {
         if (memberEntity == null) {
             return username;
         }
+            System.out.println("---------------------------------"+memberEntity);
         //3.存在生成jwt
         Map<String, Object> map = new HashMap<>(); //map           载荷中的数据
         map.put("id",memberEntity.getId());

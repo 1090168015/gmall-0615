@@ -16,7 +16,7 @@ public class SearchController {
     @Autowired
     private SearchService searchService;
     @GetMapping
-    public Resp<Object> search(SearchParamVO searchParamVO){
+    public Resp<Object> search(SearchParamVO searchParamVO){//封装前端检索条件
         SearchResponse response = this.searchService.search(searchParamVO);
         return Resp.ok(response);
     }

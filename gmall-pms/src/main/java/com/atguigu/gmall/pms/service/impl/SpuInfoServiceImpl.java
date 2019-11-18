@@ -48,42 +48,30 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
    private SkuImagesDao skuImagesDao;
    @Autowired
    private SkuSaleAttrValueDao skuSaleAttrValueDao;
-
    @Autowired
    private GmallSmsClient gmallSmsClient;
     @Autowired
     SpuInfoDescService spuInfoDescService;
-
     @Autowired
     private AmqpTemplate amqpTemplate;
-
-
-
     @Override
     public PageVo queryPage(QueryCondition params) {
         IPage<SpuInfoEntity> page = this.page(
                 new Query<SpuInfoEntity>().getPage(params),
                 new QueryWrapper<SpuInfoEntity>()
         );
-
         return new PageVo(page);
     }
-
     @Override
     public PageVo querySpuInfoByKeyPage(Long catId, QueryCondition queryCondition) {
-
         QueryWrapper<SpuInfoEntity> wrapper = new QueryWrapper<>();
         if (catId != 0) {//判断catId是否为0
-
             wrapper.eq("catalog_id", catId);
-
         }
 
         String key = queryCondition.getKey();//key可以是id或者spu_name，用户可以输入的值
         if (StringUtils.isNotBlank(key)) {//判断key是否为空
             wrapper.and(t -> t.eq("id", key).or().like("spu_name", key));//根据spu_name或者id值查询
-
-
         }
 
         IPage<SpuInfoEntity> page = this.page(
@@ -110,20 +98,13 @@ public class SpuInfoServiceImpl extends ServiceImpl<SpuInfoDao, SpuInfoEntity> i
         saveBaseAttr(spuInfoVO, spuId);
         /// 2. 保存sku相关信息相关3张表，新增sku必须要有spu，所以sku与spu顺序不能变
         saveSku(spuInfoVO, spuId);
-     //   int i =1/0;
-
-        sendMsg(spuId,"insert");//发送消息对的方法在下面
-
-      //  sendMsgSecond(spuId,"insert");
-
-
-
+        sendMsg(spuId,"insert");//发送消息对列方法在下面
     }
 
     private void sendMsgSecond(Long spuId,String type){
         HashMap<String, Object> map = new HashMap<>();
         map.put("id",spuId);
-        map.put("tpye",type) ;
+        map.put("tpye",type) ;//routingKey
         amqpTemplate.convertAndSend("GMALL-ITEM-EXCHANGE","item."+type,map);
     }
 

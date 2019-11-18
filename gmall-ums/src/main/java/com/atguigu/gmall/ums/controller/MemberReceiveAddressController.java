@@ -1,6 +1,7 @@
 package com.atguigu.gmall.ums.controller;
 
 import java.util.Arrays;
+import java.util.List;
 
 
 import com.atguigu.gmall.usm.entity.MemberReceiveAddressEntity;
@@ -8,6 +9,7 @@ import com.atguigu.gmall.ums.service.MemberReceiveAddressService;
 import com.atguigu.gmall.core.bean.PageVo;
 import com.atguigu.gmall.core.bean.QueryCondition;
 import com.atguigu.gmall.core.bean.Resp;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +30,15 @@ import org.springframework.web.bind.annotation.*;
 public class MemberReceiveAddressController {
     @Autowired
     private MemberReceiveAddressService memberReceiveAddressService;
+
+
+    @ApiOperation("地址列表")
+    @GetMapping("{userId}")
+    public Resp<List<MemberReceiveAddressEntity>> queryAddressByUserId(@PathVariable("userId") Long userId) {
+        List<MemberReceiveAddressEntity> addressEntities = memberReceiveAddressService.list(new QueryWrapper<MemberReceiveAddressEntity>().eq("member_id", userId));
+
+        return Resp.ok(addressEntities);
+    }
 
     /**
      * 列表

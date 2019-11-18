@@ -39,7 +39,7 @@ class GmallSearchApplicationTests {
         Long pageNum =1L;
         Long pageSize =100L;
         do{ //1.分页SPU查询数据
-            QueryCondition queryCondition = new QueryCondition();;//分页条件对象
+            QueryCondition queryCondition = new QueryCondition();;//分页条件对象，为什么要分页，是为了将数据分批导入ES
             queryCondition.setPage(pageNum);//给分页条件设置值
             queryCondition.setLimit(pageSize);
             Resp<List<SpuInfoEntity>> listResp = gmallPmsClient.querySpuPage(queryCondition);//根据分页条件获取分页对象
