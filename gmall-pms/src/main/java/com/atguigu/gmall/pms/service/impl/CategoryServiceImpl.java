@@ -39,12 +39,10 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
         QueryWrapper<CategoryEntity> wapper = new QueryWrapper<>();
         if (level != 0){// //分类所在的级别为0查询所有商品分类
             wapper.eq("cat_level",level);
-
         }
         if (parentCid != null) {//判断父节点id是否为null
             wapper.eq("parent_cid",parentCid);
         }
-
         return this.list(wapper);
     }
 

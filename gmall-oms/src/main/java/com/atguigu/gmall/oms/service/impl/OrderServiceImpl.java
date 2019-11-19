@@ -12,6 +12,7 @@ import com.atguigu.gmall.oms.vo.OrderItemVO;
 import com.atguigu.gmall.oms.vo.OrderSubmitVO;
 import com.atguigu.gmall.pms.entity.SkuInfoEntity;
 import com.atguigu.gmall.usm.entity.MemberReceiveAddressEntity;
+import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -34,6 +35,11 @@ public class OrderServiceImpl extends ServiceImpl<OrderDao, OrderEntity> impleme
     OrderItemDao orderItemDao;
     @Autowired
     GmallPmsClient gmallPmsClient;
+    @Autowired
+    private OrderDao orderDao;
+
+    @Autowired
+    private AmqpTemplate amqpTemplate;
 
 
 
@@ -102,8 +108,26 @@ public class OrderServiceImpl extends ServiceImpl<OrderDao, OrderEntity> impleme
 
             });
         }
-        System.out.println(orderEntity);
-        return orderEntity;
+        //System.out.println(orderEntity);
+        /*订单创建完成，但是如果还没有来的及响应，挂掉了，那么如果不解锁库存，也会造成库存锁死，所以也要在创建订单完成时创建延时任务，用于超时后关闭订单，释放锁定的资源解锁库存。订单功能创建方法，是在oms里创建额，所以要在oms里创建延时任务解锁库存*/
+        //发送消息到交换机，并指定延时队列routingKey：oms.close，而绑定此routingKey的消息队列为延时队列，延时队列到期后会发送消息到死信交换机，然后发到死信队列，所以编写监听器，要监听死信队列
+        //订单创建成功需要修改订单状态，将订单状态改为4，订单关闭状态，--关单
+        this.amqpTemplate.convertAndSend("OMS-EXCHANGE","oms.close",submitVO.getOrderToken());// 所发信息内容,内容是订单号,发送消息到
+        return orderEntity;         //发送消息之后要有监听器监听消息，所以要编写监听器接收消息
+    }
+
+    @Override
+    public int closeOrder(String orderToken) {
+//        OrderEntity orderEntity=  this.getOne(new QueryWrapper<OrderEntity>().eq("order_sn",orderToken));
+//        if (orderEntity.getStatus()==0){    //update oms_order set `status`=4  where order_sn=#{orderToken} and `status`=0
+           return this.orderDao.closeOrder(orderToken);//返回数据库的影响条数，如果返回1说明订单状态已修改
+//        }
+//        return 0;
+    }
+
+    @Override
+    public int success(String orderToken) {
+        return this.orderDao.success(orderToken);
     }
 
 }

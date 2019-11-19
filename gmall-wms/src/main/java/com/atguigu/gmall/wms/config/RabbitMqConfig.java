@@ -22,7 +22,7 @@ public class RabbitMqConfig {
     public Queue queue(){//延时队列
         Map<String, Object> arguments = new HashMap<>();
         arguments.put("x-dead-letter-exchange", "WMS-EXCHANGE");//死信路由
-        arguments.put("x-dead-letter-routing-key", "wms.ttl");//死信队列
+        arguments.put("x-dead-letter-routing-key", "wms.ttl");//死信队列,routingKey:wms.ttl
         arguments.put("x-message-ttl", 60000);//延时队列延时时间
         return new Queue("WMS-TTL-QUEUE",true,false,false,arguments);
     }

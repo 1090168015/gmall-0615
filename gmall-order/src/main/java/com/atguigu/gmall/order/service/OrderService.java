@@ -181,7 +181,7 @@ public class OrderService {
 
     }
 
-    public void submit(OrderSubmitVO orderSubmitVO) {
+    public OrderEntity submit(OrderSubmitVO orderSubmitVO) {
 //        1. 验证令牌防止重复提交
         String orderToken = orderSubmitVO.getOrderToken();//获取保存到orderSubmitVO中的唯一值
 
@@ -222,14 +222,17 @@ public class OrderService {
         }
 //        4. 生成订单
         UserInfo userInfo = LoginInterceptor.get();
+        Resp<OrderEntity> orderResp =null;
         try {
             orderSubmitVO.setUserId(userInfo.getUserId());
             Resp<MemberEntity> memberEntityResp = this.gmallUmsClient.queryUserById(userInfo.getUserId());
             MemberEntity memberEntity = memberEntityResp.getData();
             orderSubmitVO.setUserName(memberEntity.getUsername());
-            Resp<OrderEntity> orderResp = this.gmallOmsClient.createOrder(orderSubmitVO);
+            orderResp = this.gmallOmsClient.createOrder(orderSubmitVO);
         } catch (Exception e) {
             e.printStackTrace();
+ //           创建订单前要验库锁库，查询资源是否允许购买，锁定资源，防止别的线程争抢，订单创建失败时，可以基于已锁定资源继续创建订单，可以不用释放资源，不解锁也可以
+ //           this.amqpTemplate.convertAndSend("WMS-EXCHANGE","wms.ttl",orderToken);//订单创建失败，立即解锁库存，
             throw new RuntimeException("订单创建失败！服务器异常！");
         }
 
@@ -240,5 +243,14 @@ public class OrderService {
         map.put("skuIds",skuIds);
 
         amqpTemplate.convertAndSend("GMALL-ORDER-EXCHANGE","cart.delete",map);//发送消息删除购物车
+        if (orderResp !=null){
+            return orderResp.getData();
+        }
+        return  null;
+    }
+
+    public void paySuccess(String out_trade_no) {//经消息队列将订单号作为发送消息体，用于监听消息放在支付成功后修改订单状态为代发货状态，和扣除库存
+        this.amqpTemplate.convertAndSend("GMALL-ORDER-EXCHANGE","order.pay",out_trade_no);//发送消息到交换机，监听器在oms.listener;
+
     }
 }
